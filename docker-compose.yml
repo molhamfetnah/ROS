@@ -1,0 +1,16 @@
+services:
+  ros:
+    build: .
+    container_name: ros_jazzy
+    network_mode: host
+    tty: true
+    stdin_open: true
+    working_dir: /workspace
+    volumes:
+      - ./workspace:/workspace
+      - ./workspace/src:/workspace/src
+      - ~/.ros:/root/.ros
+    environment:
+      - ROS_DOMAIN_ID=0
+      - DISPLAY=${DISPLAY}
+    command: bash
