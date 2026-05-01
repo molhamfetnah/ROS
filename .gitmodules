@@ -1,0 +1,30 @@
+[submodule "program/benchmark-core"]
+	path = program/benchmark-core
+	url = https://github.com/molhamfetnah/benchmark-core.git
+[submodule "program/digital-twin-pipeline"]
+	path = program/digital-twin-pipeline
+	url = https://github.com/molhamfetnah/digital-twin-pipeline.git
+[submodule "program/docs-multilingual-continuity"]
+	path = program/docs-multilingual-continuity
+	url = https://github.com/molhamfetnah/docs-multilingual-continuity.git
+[submodule "program/ik-uncertainty-learning"]
+	path = program/ik-uncertainty-learning
+	url = https://github.com/molhamfetnah/ik-uncertainty-learning.git
+[submodule "program/localization-tracking"]
+	path = program/localization-tracking
+	url = https://github.com/molhamfetnah/localization-tracking.git
+[submodule "program/repro-packages"]
+	path = program/repro-packages
+	url = https://github.com/molhamfetnah/repro-packages.git
+[submodule "program/research-program-index"]
+	path = program/research-program-index
+	url = https://github.com/molhamfetnah/research-program-index.git
+[submodule "program/sensorless-estimation-suite"]
+	path = program/sensorless-estimation-suite
+	url = https://github.com/molhamfetnah/sensorless-estimation-suite.git
+[submodule "program/swarm-path-planning-bees"]
+	path = program/swarm-path-planning-bees
+	url = https://github.com/molhamfetnah/swarm-path-planning-bees.git
+[submodule "program/uav-mpc-geometric-control"]
+	path = program/uav-mpc-geometric-control
+	url = https://github.com/molhamfetnah/uav-mpc-geometric-control.git
