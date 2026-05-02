@@ -104,6 +104,42 @@ PATH="$FAKE_BIN:$PATH" TRACKING_MAX_BYTES=10 "$SCRIPT" \
 mapfile -t ROTATED_FILES < <(find "$COLLISION_DIR" -maxdepth 1 -type f -name 'history.*.ndjson' | sort)
 test "${#ROTATED_FILES[@]}" -eq 2
 
+CONCURRENT_DIR="$WORK/.concurrent-rotation"
+mkdir -p "$CONCURRENT_DIR"
+python3 - "$CONCURRENT_DIR/history.ndjson" <<'PY'
+from pathlib import Path
+import sys
+
+Path(sys.argv[1]).write_text("x" * 20000, encoding="utf-8")
+PY
+
+RUNS=16
+set +e
+for i in $(seq 1 "$RUNS"); do
+  (
+    TRACKING_MAX_BYTES=10000 "$SCRIPT" \
+      --repo-root "$ROOT" \
+      --branch "main" \
+      --porcelain-file "$WORK/porcelain.txt" \
+      --tracking-dir "$CONCURRENT_DIR" \
+      >/dev/null 2>"$CONCURRENT_DIR/err.$i"
+    echo $? > "$CONCURRENT_DIR/rc.$i"
+  ) &
+done
+wait
+set -e
+
+FAILS=0
+for i in $(seq 1 "$RUNS"); do
+  rc="$(cat "$CONCURRENT_DIR/rc.$i")"
+  if [[ "$rc" -ne 0 ]]; then
+    FAILS=$((FAILS + 1))
+  fi
+done
+
+test "$FAILS" -eq 0
+test "$(wc -l < "$CONCURRENT_DIR/history.ndjson")" -eq "$RUNS"
+
 : > "$WORK/porcelain-empty.txt"
 "$SCRIPT" \
   --repo-root "$ROOT" \

@@ -41,22 +41,7 @@ mkdir -p "$TRACKING_DIR"
 LATEST_JSON="$TRACKING_DIR/latest.json"
 HISTORY="$TRACKING_DIR/history.ndjson"
 LATEST_TXT="$TRACKING_DIR/latest.txt"
-
-if [[ -f "$HISTORY" ]]; then
-  size="$(wc -c < "$HISTORY" | tr -d '[:space:]')"
-  if [[ "$size" -gt "$MAX_BYTES" ]]; then
-    rotation_ts="$(date -u +%Y%m%dT%H%M%SZ)"
-    rotation_ns="$(date -u +%N)"
-    rotation_base="$TRACKING_DIR/history.${rotation_ts}.${rotation_ns}.$$"
-    rotation_target="${rotation_base}.ndjson"
-    rotation_index=0
-    while [[ -e "$rotation_target" ]]; do
-      rotation_index=$((rotation_index + 1))
-      rotation_target="${rotation_base}.${rotation_index}.ndjson"
-    done
-    mv "$HISTORY" "$rotation_target"
-  fi
-fi
+LOCK_FILE="$TRACKING_DIR/.history.lock"
 
 UNTRACKED=()
 MODIFIED=()
@@ -105,8 +90,35 @@ json="$(jq -cn \
   --argjson renamed "$(to_json_array "${RENAMED[@]}")" \
   '{timestamp:$ts,repo_root:$repo,branch:$branch,untracked:$untracked,modified:$modified,deleted:$deleted,renamed:$renamed}')"
 
-printf '%s\n' "$json" > "$LATEST_JSON"
-printf '%s\n' "$json" >> "$HISTORY"
+{
+  flock -x 9
+
+  if [[ -f "$HISTORY" ]]; then
+    size="$(wc -c < "$HISTORY" | tr -d '[:space:]')"
+    if [[ "$size" -gt "$MAX_BYTES" ]]; then
+      rotation_ts="$(date -u +%Y%m%dT%H%M%SZ)"
+      rotation_ns="$(date -u +%N)"
+      rotation_base="$TRACKING_DIR/history.${rotation_ts}.${rotation_ns}.$$"
+      rotation_target="${rotation_base}.ndjson"
+      rotation_index=0
+      while [[ -e "$rotation_target" ]]; do
+        rotation_index=$((rotation_index + 1))
+        rotation_target="${rotation_base}.${rotation_index}.ndjson"
+      done
+
+      if [[ -f "$HISTORY" ]]; then
+        if ! mv "$HISTORY" "$rotation_target"; then
+          if [[ -f "$HISTORY" ]]; then
+            exit 1
+          fi
+        fi
+      fi
+    fi
+  fi
+
+  printf '%s\n' "$json" > "$LATEST_JSON"
+  printf '%s\n' "$json" >> "$HISTORY"
+} 9>>"$LOCK_FILE"
 
 {
   echo "timestamp: $(jq -r '.timestamp' "$LATEST_JSON")"
