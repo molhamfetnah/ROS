@@ -5,6 +5,7 @@ REPO_ROOT=""
 BRANCH=""
 PORCELAIN_FILE=""
 TRACKING_DIR=""
+MAX_BYTES="${TRACKING_MAX_BYTES:-10485760}"
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -41,6 +42,13 @@ LATEST_JSON="$TRACKING_DIR/latest.json"
 HISTORY="$TRACKING_DIR/history.ndjson"
 LATEST_TXT="$TRACKING_DIR/latest.txt"
 
+if [[ -f "$HISTORY" ]]; then
+  size="$(wc -c < "$HISTORY" | tr -d '[:space:]')"
+  if [[ "$size" -gt "$MAX_BYTES" ]]; then
+    mv "$HISTORY" "$TRACKING_DIR/history.$(date -u +%Y%m%dT%H%M%SZ).ndjson"
+  fi
+fi
+
 UNTRACKED=()
 MODIFIED=()
 DELETED=()
@@ -70,18 +78,22 @@ while IFS= read -r line; do
   fi
 done < "$PORCELAIN_FILE"
 
-json_array() {
-  printf '%s\n' "$@" | jq -Rsc 'if . == "\n" then [] else split("\n")[:-1] end'
+to_json_array() {
+  if [[ $# -eq 0 ]]; then
+    printf '[]'
+  else
+    printf '%s\n' "$@" | jq -Rsc 'split("\n")[:-1]'
+  fi
 }
 
 json="$(jq -cn \
   --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
   --arg repo "$REPO_ROOT" \
   --arg branch "$BRANCH" \
-  --argjson untracked "$(json_array "${UNTRACKED[@]}")" \
-  --argjson modified "$(json_array "${MODIFIED[@]}")" \
-  --argjson deleted "$(json_array "${DELETED[@]}")" \
-  --argjson renamed "$(json_array "${RENAMED[@]}")" \
+  --argjson untracked "$(to_json_array "${UNTRACKED[@]}")" \
+  --argjson modified "$(to_json_array "${MODIFIED[@]}")" \
+  --argjson deleted "$(to_json_array "${DELETED[@]}")" \
+  --argjson renamed "$(to_json_array "${RENAMED[@]}")" \
   '{timestamp:$ts,repo_root:$repo,branch:$branch,untracked:$untracked,modified:$modified,deleted:$deleted,renamed:$renamed}')"
 
 printf '%s\n' "$json" > "$LATEST_JSON"

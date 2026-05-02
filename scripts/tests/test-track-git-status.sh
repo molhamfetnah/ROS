@@ -39,3 +39,33 @@ grep -q '^untracked: 1$' "$WORK/.tracking/latest.txt"
 grep -q '^modified: 1$' "$WORK/.tracking/latest.txt"
 grep -q '^deleted: 1$' "$WORK/.tracking/latest.txt"
 grep -q '^renamed: 1$' "$WORK/.tracking/latest.txt"
+
+ROTATION_DIR="$WORK/.rotation"
+mkdir -p "$ROTATION_DIR"
+python3 - "$ROTATION_DIR/history.ndjson" <<'PY'
+from pathlib import Path
+import sys
+
+Path(sys.argv[1]).write_text("x" * 120, encoding="utf-8")
+PY
+
+TRACKING_MAX_BYTES=10 "$SCRIPT" \
+  --repo-root "$ROOT" \
+  --branch "main" \
+  --porcelain-file "$WORK/porcelain.txt" \
+  --tracking-dir "$ROTATION_DIR"
+
+test -f "$ROTATION_DIR/history.ndjson"
+ls "$ROTATION_DIR"/history.*.ndjson >/dev/null
+
+: > "$WORK/porcelain-empty.txt"
+"$SCRIPT" \
+  --repo-root "$ROOT" \
+  --branch "main" \
+  --porcelain-file "$WORK/porcelain-empty.txt" \
+  --tracking-dir "$WORK/.tracking-empty"
+
+jq -e '.untracked == []' "$WORK/.tracking-empty/latest.json" >/dev/null
+jq -e '.modified == []' "$WORK/.tracking-empty/latest.json" >/dev/null
+jq -e '.deleted == []' "$WORK/.tracking-empty/latest.json" >/dev/null
+jq -e '.renamed == []' "$WORK/.tracking-empty/latest.json" >/dev/null
