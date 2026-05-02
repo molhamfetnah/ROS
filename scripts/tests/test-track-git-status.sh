@@ -58,6 +58,52 @@ TRACKING_MAX_BYTES=10 "$SCRIPT" \
 test -f "$ROTATION_DIR/history.ndjson"
 ls "$ROTATION_DIR"/history.*.ndjson >/dev/null
 
+FAKE_BIN="$WORK/fake-bin"
+mkdir -p "$FAKE_BIN"
+cat > "$FAKE_BIN/date" <<'SH'
+#!/usr/bin/env bash
+if [[ "${1:-}" == "-u" ]]; then
+  shift
+fi
+
+case "${1:-}" in
+  +%Y%m%dT%H%M%SZ)
+    printf '20000101T000000Z\n'
+    ;;
+  +%Y-%m-%dT%H:%M:%SZ)
+    printf '2000-01-01T00:00:00Z\n'
+    ;;
+  *)
+    /usr/bin/date -u "${1:-}"
+    ;;
+esac
+SH
+chmod +x "$FAKE_BIN/date"
+
+COLLISION_DIR="$WORK/.rotation-collision"
+mkdir -p "$COLLISION_DIR"
+python3 - "$COLLISION_DIR/history.ndjson" <<'PY'
+from pathlib import Path
+import sys
+
+Path(sys.argv[1]).write_text("x" * 120, encoding="utf-8")
+PY
+
+PATH="$FAKE_BIN:$PATH" TRACKING_MAX_BYTES=10 "$SCRIPT" \
+  --repo-root "$ROOT" \
+  --branch "main" \
+  --porcelain-file "$WORK/porcelain.txt" \
+  --tracking-dir "$COLLISION_DIR"
+
+PATH="$FAKE_BIN:$PATH" TRACKING_MAX_BYTES=10 "$SCRIPT" \
+  --repo-root "$ROOT" \
+  --branch "main" \
+  --porcelain-file "$WORK/porcelain.txt" \
+  --tracking-dir "$COLLISION_DIR"
+
+mapfile -t ROTATED_FILES < <(find "$COLLISION_DIR" -maxdepth 1 -type f -name 'history.*.ndjson' | sort)
+test "${#ROTATED_FILES[@]}" -eq 2
+
 : > "$WORK/porcelain-empty.txt"
 "$SCRIPT" \
   --repo-root "$ROOT" \

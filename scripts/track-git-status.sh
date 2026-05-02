@@ -45,7 +45,16 @@ LATEST_TXT="$TRACKING_DIR/latest.txt"
 if [[ -f "$HISTORY" ]]; then
   size="$(wc -c < "$HISTORY" | tr -d '[:space:]')"
   if [[ "$size" -gt "$MAX_BYTES" ]]; then
-    mv "$HISTORY" "$TRACKING_DIR/history.$(date -u +%Y%m%dT%H%M%SZ).ndjson"
+    rotation_ts="$(date -u +%Y%m%dT%H%M%SZ)"
+    rotation_ns="$(date -u +%N)"
+    rotation_base="$TRACKING_DIR/history.${rotation_ts}.${rotation_ns}.$$"
+    rotation_target="${rotation_base}.ndjson"
+    rotation_index=0
+    while [[ -e "$rotation_target" ]]; do
+      rotation_index=$((rotation_index + 1))
+      rotation_target="${rotation_base}.${rotation_index}.ndjson"
+    done
+    mv "$HISTORY" "$rotation_target"
   fi
 fi
 
