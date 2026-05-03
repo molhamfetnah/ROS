@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-WORK="$ROOT/scripts/tests/.tmp-track-git-status"
+WORK="$ROOT/scripts/tests/.tmp-track-git-status.$$.$RANDOM"
 SCRIPT="$ROOT/scripts/track-git-status.sh"
 
 rm -rf "$WORK"
