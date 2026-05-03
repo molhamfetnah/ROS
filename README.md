@@ -58,12 +58,16 @@ Expected: 10 `program/*` entries listed with commit SHAs.
 ### 4.1 Ensure parent repo is current
 
 ```bash
-cd /mnt/data/ros
+cd ROS
+# or: cd <path-to-your-ROS-clone>
+git rev-parse --show-toplevel
 git checkout main
 git pull --ff-only
 ```
 
-Expected: `Already up to date.` or fast-forward output.
+Expected:
+- `git rev-parse --show-toplevel` prints a path ending with `/ROS`
+- `Already up to date.` or fast-forward output.
 
 ### 4.2 Initialize submodules
 
