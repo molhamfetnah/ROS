@@ -36,7 +36,64 @@ It is **not** where all implementation code lives; implementation is distributed
 
 ## 3. Quick Start (10-Minute Path)
 
+Run from a clean terminal:
+
+```bash
+git clone --recurse-submodules https://github.com/molhamfetnah/ROS.git
+cd ROS
+git submodule sync --recursive
+git submodule update --init --recursive
+```
+
+Validation checkpoint:
+
+```bash
+git submodule status
+```
+
+Expected: 10 `program/*` entries listed with commit SHAs.
+
 ## 4. Full Setup (First-Time Environment)
+
+### 4.1 Ensure parent repo is current
+
+```bash
+cd /mnt/data/ros
+git checkout main
+git pull --ff-only
+```
+
+Expected: `Already up to date.` or fast-forward output.
+
+### 4.2 Initialize submodules
+
+```bash
+git submodule sync --recursive
+git submodule update --init --recursive
+```
+
+Expected: each `program/*` submodule checked out with no errors.
+
+### 4.3 Verify workspace health
+
+```bash
+git status --short --branch
+git submodule status
+```
+
+Expected:
+- parent branch shown (normally `## main`)
+- no unexpected dirty state
+- submodule SHAs listed
+
+### 4.4 GitHub CLI auth (for push/PR operations)
+
+```bash
+gh auth status || gh auth login
+gh repo view molhamfetnah/ROS --json defaultBranchRef
+```
+
+Expected: authenticated account and default branch details returned.
 
 ## 5. Day-2 Operations
 
