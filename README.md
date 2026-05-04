@@ -230,20 +230,28 @@ Run these checks from the feature worktree that contains your PR changes (not th
 ```bash
 cd <path-to-your-feature-worktree> || exit 1
 git rev-parse --show-toplevel
-git branch --show-current
+FEATURE_BRANCH=<your-feature-branch>
+CURRENT_BRANCH="$(git branch --show-current)"
+test "$CURRENT_BRANCH" != "main"
+test "$CURRENT_BRANCH" = "$FEATURE_BRANCH"
 git status --short --branch
 git submodule status
 bash scripts/tests/test-track-git-status.sh
 bash scripts/tests/test-git-tracking-shim.sh
 ```
 
-Use the parent checkout only for final parent-repo updates (submodule pointers/docs) before opening the parent PR:
+Perform final parent-repo updates (submodule pointers/docs) in this same feature worktree branch only before opening the parent PR:
 
 ```bash
-cd <path-to-your-ROS-clone> || exit 1
+cd <path-to-your-feature-worktree> || exit 1
 git rev-parse --show-toplevel
-git branch --show-current
+FEATURE_BRANCH=<your-feature-branch>
+CURRENT_BRANCH="$(git branch --show-current)"
+test "$CURRENT_BRANCH" != "main"
+test "$CURRENT_BRANCH" = "$FEATURE_BRANCH"
 ```
+
+Reserve the parent `main` checkout for sync/cleanup commands only (see section 8.1).
 
 Expected: clean or intentional diff only; test scripts pass.
 
