@@ -60,13 +60,16 @@ Expected: 10 `program/*` entries listed with commit SHAs.
 ```bash
 cd <path-to-your-ROS-clone> || exit 1
 git rev-parse --show-toplevel
-test "$(basename "$(git rev-parse --show-toplevel)")" = "ROS" || exit 1
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq 'github\.com[:/].+/ROS(\.git)?$' || { echo "Error: origin must point to the ROS repository." >&2; exit 1; }
 git checkout main
 git pull --ff-only
 ```
 
 Expected:
-- `git rev-parse --show-toplevel` prints the absolute path to your clone root, and the repo identity check passes (`ROS`)
+- `git rev-parse --show-toplevel` prints the absolute path to your clone root.
+- Worktree and `origin` identity checks pass before branch mutation commands run.
 - `Already up to date.` or fast-forward output.
 
 ### 4.2 Initialize submodules
