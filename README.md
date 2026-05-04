@@ -104,7 +104,98 @@ Expected: authenticated account and default branch details returned.
 
 ## 5. Day-2 Operations
 
+### 5.1 Sync workspace before work
+
+```bash
+cd /mnt/data/ros
+git checkout main
+git pull --ff-only
+git submodule sync --recursive
+git submodule update --init --recursive
+```
+
+### 5.2 Worktree-based feature workflow
+
+```bash
+cd /mnt/data/ros
+git worktree add .worktrees/<feature-branch> -b <feature-branch>
+cd .worktrees/<feature-branch>
+```
+
+### 5.3 Tracking-system usage (parent repo only)
+
+After shim install, run:
+
+```bash
+cd /mnt/data/ros
+git status
+ls -la .tracking
+```
+
+Expected:
+- `.tracking/latest.json`
+- `.tracking/history.ndjson`
+- `.tracking/latest.txt`
+
+### 5.4 Submodule-safe operations
+
+For submodule-specific work, run commands inside target submodule:
+
+```bash
+cd /mnt/data/ros/program/research-program-index
+git status
+```
+
+Parent-tracking artifacts should not be created inside submodules.
+
 ## 6. Troubleshooting Playbooks
+
+### Issue A: `No commits between ...` when creating PR in parent repo
+
+Cause: work happened inside submodules, not parent tracked files.
+
+Fix:
+```bash
+cd /mnt/data/ros
+git status --short
+git diff --submodule
+```
+
+If parent has no diff, create PR in the child repo instead.
+
+### Issue B: SSH push timeout (`github.com:22`)
+
+Fix:
+```bash
+gh config set git_protocol https
+gh auth setup-git
+git remote -v
+```
+
+Retry push after protocol switch.
+
+### Issue C: Wrong base branch/default branch mismatch
+
+Check:
+```bash
+gh repo view molhamfetnah/ROS --json defaultBranchRef
+git branch -a
+```
+
+Set correct default branch if needed:
+```bash
+gh repo edit molhamfetnah/ROS --default-branch main
+```
+
+### Issue D: Submodule state drift
+
+Fix:
+```bash
+cd /mnt/data/ros
+git submodule sync --recursive
+git submodule update --init --recursive
+git submodule status
+```
 
 ## 7. Contribution Workflow
 
