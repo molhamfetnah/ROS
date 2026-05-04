@@ -109,6 +109,9 @@ Expected: authenticated account and default branch details returned.
 ```bash
 cd <path-to-your-ROS-clone> || exit 1
 git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
 git checkout main
 git pull --ff-only
 git submodule sync --recursive
@@ -120,6 +123,9 @@ git submodule update --init --recursive
 ```bash
 cd <path-to-your-ROS-clone> || exit 1
 git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
 git worktree add -b <feature-branch> .worktrees/<feature-branch>
 cd .worktrees/<feature-branch>
 ```
@@ -230,6 +236,9 @@ Run these checks from the feature worktree that contains your PR changes (not th
 ```bash
 cd <path-to-your-feature-worktree> || exit 1
 git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
 FEATURE_BRANCH=<your-feature-branch>
 CURRENT_BRANCH="$(git branch --show-current)"
 test "$CURRENT_BRANCH" != "main"
@@ -245,6 +254,9 @@ Perform final parent-repo updates (submodule pointers/docs) in this same feature
 ```bash
 cd <path-to-your-feature-worktree> || exit 1
 git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
 FEATURE_BRANCH=<your-feature-branch>
 CURRENT_BRANCH="$(git branch --show-current)"
 test "$CURRENT_BRANCH" != "main"
@@ -264,6 +276,9 @@ Run cleanup/sync commands from the parent `main` checkout, not from an active fe
 ```bash
 cd <path-to-your-ROS-clone> || exit 1
 git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
 git checkout main
 git pull --ff-only
 git fetch --prune
