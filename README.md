@@ -214,6 +214,61 @@ git submodule status
 
 ## 7. Contribution Workflow
 
+### 7.1 Branching model
+- Parent repo: orchestration/docs/submodule-pointer changes.
+- Child repo: domain implementation changes.
+
+### 7.2 PR sequencing
+1. Merge child-repo PRs first.
+2. Update/pin submodule pointers in parent.
+3. Merge parent PR last.
+
+### 7.3 Pre-PR checks
+
+```bash
+cd /mnt/data/ros
+git status --short --branch
+git submodule status
+bash scripts/tests/test-track-git-status.sh
+bash scripts/tests/test-git-tracking-shim.sh
+```
+
+Expected: clean or intentional diff only; test scripts pass.
+
 ## 8. Safety, Recovery, and Cleanup
 
+### 8.1 Safe cleanup
+
+```bash
+cd /mnt/data/ros
+git checkout main
+git pull --ff-only
+git fetch --prune
+```
+
+### 8.2 Remove finished worktree
+
+```bash
+git worktree list
+git worktree remove .worktrees/<feature-branch>
+```
+
+### 8.3 Submodule recovery
+
+```bash
+git submodule sync --recursive
+git submodule update --init --recursive
+```
+
+### 8.4 DO NOT use destructive reset without explicit intent
+- Avoid `git reset --hard` unless you explicitly want to discard local work.
+
 ## 9. References
+
+- Design spec: `docs/superpowers/specs/2026-05-03-master-readme-guidance-design.md`
+- Tracking implementation plan: `docs/superpowers/plans/2026-05-02-git-status-tracking-implementation.md`
+- Repo architecture spec: `docs/superpowers/specs/2026-04-30-repo-architecture-design.md`
+- Program bootstrap plan: `docs/superpowers/plans/2026-04-30-multi-repo-program-bootstrap.md`
+- Core subrepos:
+  - `program/research-program-index/README.md`
+  - `program/benchmark-core/README.md`
