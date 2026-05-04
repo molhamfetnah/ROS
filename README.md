@@ -134,11 +134,13 @@ cd .worktrees/<feature-branch>
 
 ### 5.3 Tracking-system usage (parent repo only)
 
-After shim install, run:
+Install the git tracking shim first, then start a new shell (or source your shell rc file) so the shim is active, and run:
 
 ```bash
 cd <path-to-your-ROS-clone> || exit 1
 git rev-parse --show-toplevel
+scripts/install-git-tracking-shim.sh
+# Start a new shell, or source your shell rc file before continuing.
 git status
 ls -la .tracking
 ```
