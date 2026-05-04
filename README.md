@@ -225,12 +225,24 @@ git submodule status
 
 ### 7.3 Pre-PR checks
 
+Run these checks from the feature worktree that contains your PR changes (not the parent `main` checkout):
+
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-feature-worktree> || exit 1
+git rev-parse --show-toplevel
+git branch --show-current
 git status --short --branch
 git submodule status
 bash scripts/tests/test-track-git-status.sh
 bash scripts/tests/test-git-tracking-shim.sh
+```
+
+Use the parent checkout only for final parent-repo updates (submodule pointers/docs) before opening the parent PR:
+
+```bash
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
+git branch --show-current
 ```
 
 Expected: clean or intentional diff only; test scripts pass.
@@ -239,8 +251,11 @@ Expected: clean or intentional diff only; test scripts pass.
 
 ### 8.1 Safe cleanup
 
+Run cleanup/sync commands from the parent `main` checkout, not from an active feature worktree:
+
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
 git checkout main
 git pull --ff-only
 git fetch --prune
