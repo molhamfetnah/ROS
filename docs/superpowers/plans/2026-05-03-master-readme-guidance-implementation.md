@@ -234,6 +234,8 @@ git rev-parse --show-toplevel
 git rev-parse --is-inside-work-tree >/dev/null
 origin_url="$(git remote get-url origin 2>/dev/null || true)"
 printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
+git checkout main
+git pull --ff-only
 git worktree add -b <feature-branch> .worktrees/<feature-branch>
 cd .worktrees/<feature-branch>
 ```
@@ -435,6 +437,11 @@ git fetch --prune
 ### 8.2 Remove finished worktree
 
 ```bash
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
 git worktree list
 git worktree remove .worktrees/<feature-branch>
 ```
@@ -442,6 +449,11 @@ git worktree remove .worktrees/<feature-branch>
 ### 8.3 Submodule recovery
 
 ```bash
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
 git submodule sync --recursive
 git submodule update --init --recursive
 ```
