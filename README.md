@@ -120,7 +120,7 @@ git submodule update --init --recursive
 ```bash
 cd <path-to-your-ROS-clone> || exit 1
 git rev-parse --show-toplevel
-git worktree add .worktrees/<feature-branch> -b <feature-branch>
+git worktree add -b <feature-branch> .worktrees/<feature-branch>
 cd .worktrees/<feature-branch>
 ```
 
@@ -183,18 +183,22 @@ Retry push after protocol switch.
 
 Check:
 ```bash
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
 gh repo view molhamfetnah/ROS --json defaultBranchRef
-gh pr view <pr-number> --json baseRefName,headRefName,url
+gh pr view <pr-number> --repo molhamfetnah/ROS --json baseRefName,headRefName,url
 ```
 
 Create PR with explicit base (safe, PR-scoped):
 ```bash
-gh pr create --base main
+gh pr create --repo molhamfetnah/ROS --base main
 ```
 
 Retarget an existing PR base (does not change repository default branch):
 ```bash
-gh pr edit <pr-number> --base main
+gh pr edit <pr-number> --repo molhamfetnah/ROS --base main
 ```
 
 ### Issue D: Submodule state drift
