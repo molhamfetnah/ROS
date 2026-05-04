@@ -42,6 +42,13 @@ if [[ -z "$REPO_ROOT" || -z "$BRANCH" || -z "$PORCELAIN_FILE" || -z "$TRACKING_D
   exit 2
 fi
 
+for required_cmd in jq flock; do
+  if ! command -v "$required_cmd" >/dev/null 2>&1; then
+    echo "Missing required command: $required_cmd. Please install '$required_cmd' and retry." >&2
+    exit 2
+  fi
+done
+
 mkdir -p "$TRACKING_DIR"
 LATEST_JSON="$TRACKING_DIR/latest.json"
 HISTORY="$TRACKING_DIR/history.ndjson"
