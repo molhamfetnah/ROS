@@ -268,7 +268,7 @@ git submodule update --init --recursive
 - Design spec: `docs/superpowers/specs/2026-05-03-master-readme-guidance-design.md`
 - Tracking implementation plan: `docs/superpowers/plans/2026-05-02-git-status-tracking-implementation.md`
 - Repo architecture spec: `docs/superpowers/specs/2026-04-30-repo-architecture-design.md`
-- Program bootstrap plan: `docs/superpowers/plans/2026-04-30-multi-repo-program-bootstrap.md`
+- Master README implementation plan: `docs/superpowers/plans/2026-05-03-master-readme-guidance-implementation.md`
 - Core subrepos:
   - `program/research-program-index/README.md`
   - `program/benchmark-core/README.md`

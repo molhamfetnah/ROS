@@ -409,7 +409,7 @@ Add:
 - Design spec: `docs/superpowers/specs/2026-05-03-master-readme-guidance-design.md`
 - Tracking implementation plan: `docs/superpowers/plans/2026-05-02-git-status-tracking-implementation.md`
 - Repo architecture spec: `docs/superpowers/specs/2026-04-30-repo-architecture-design.md`
-- Program bootstrap plan: `docs/superpowers/plans/2026-04-30-multi-repo-program-bootstrap.md`
+- Master README implementation plan: `docs/superpowers/plans/2026-05-03-master-readme-guidance-implementation.md`
 - Core subrepos:
   - `program/research-program-index/README.md`
   - `program/benchmark-core/README.md`
@@ -423,7 +423,7 @@ for p in \
   docs/superpowers/specs/2026-05-03-master-readme-guidance-design.md \
   docs/superpowers/plans/2026-05-02-git-status-tracking-implementation.md \
   docs/superpowers/specs/2026-04-30-repo-architecture-design.md \
-  docs/superpowers/plans/2026-04-30-multi-repo-program-bootstrap.md \
+  docs/superpowers/plans/2026-05-03-master-readme-guidance-implementation.md \
   program/research-program-index/README.md \
   program/benchmark-core/README.md; do
   test -f "$p" || { echo "missing: $p"; exit 1; }
@@ -452,4 +452,3 @@ git commit -m "docs: publish comprehensive root README operations guide"
 5. **Professional troubleshooting and contribution flow:** covered in Tasks 3 and 4.
 6. **Reference map to deeper docs:** covered in Task 4 references section.
 7. **No placeholders/TBDs:** all sections and command blocks explicitly defined.
-
