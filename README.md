@@ -48,7 +48,7 @@ git submodule update --init --recursive
 Validation checkpoint:
 
 ```bash
-git submodule status
+git submodule status -- program/*
 ```
 
 Expected: 10 `program/*` entries listed with commit SHAs.
@@ -85,13 +85,13 @@ Expected: each `program/*` submodule checked out with no errors.
 
 ```bash
 git status --short --branch
-git submodule status
+git submodule status -- program/*
 ```
 
 Expected:
 - parent branch shown (normally `## main`)
 - no unexpected dirty state
-- submodule SHAs listed
+- 10 `program/*` submodule SHAs listed
 
 ### 4.4 GitHub CLI auth (for push/PR operations)
 
@@ -209,7 +209,7 @@ cd <path-to-your-ROS-clone> || exit 1
 git rev-parse --show-toplevel
 git submodule sync --recursive
 git submodule update --init --recursive
-git submodule status
+git submodule status -- program/*
 ```
 
 ## 7. Contribution Workflow
@@ -235,7 +235,7 @@ CURRENT_BRANCH="$(git branch --show-current)"
 test "$CURRENT_BRANCH" != "main"
 test "$CURRENT_BRANCH" = "$FEATURE_BRANCH"
 git status --short --branch
-git submodule status
+git submodule status -- program/*
 bash scripts/tests/test-track-git-status.sh
 bash scripts/tests/test-git-tracking-shim.sh
 ```
