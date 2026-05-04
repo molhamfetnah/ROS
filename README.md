@@ -126,8 +126,8 @@ git rev-parse --show-toplevel
 git rev-parse --is-inside-work-tree >/dev/null
 origin_url="$(git remote get-url origin 2>/dev/null || true)"
 printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
-git checkout main
-git pull --ff-only
+git checkout main || exit 1
+git pull --ff-only || exit 1
 git worktree add -b <feature-branch> .worktrees/<feature-branch>
 cd .worktrees/<feature-branch>
 ```
