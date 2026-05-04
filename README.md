@@ -58,15 +58,15 @@ Expected: 10 `program/*` entries listed with commit SHAs.
 ### 4.1 Ensure parent repo is current
 
 ```bash
-cd ROS
-# or: cd <path-to-your-ROS-clone>
+cd <path-to-your-ROS-clone> || exit 1
 git rev-parse --show-toplevel
+test "$(basename "$(git rev-parse --show-toplevel)")" = "ROS" || exit 1
 git checkout main
 git pull --ff-only
 ```
 
 Expected:
-- `git rev-parse --show-toplevel` prints a path ending with `/ROS`
+- `git rev-parse --show-toplevel` prints the absolute path to your clone root, and the repo identity check passes (`ROS`)
 - `Already up to date.` or fast-forward output.
 
 ### 4.2 Initialize submodules
