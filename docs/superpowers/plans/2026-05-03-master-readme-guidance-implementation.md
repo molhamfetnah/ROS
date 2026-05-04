@@ -1,3 +1,36 @@
+# Master README Guidance Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Rewrite the root README into a comprehensive, command-driven onboarding and day-2 operations guide for the ROS parent repo and its submodule architecture.
+
+**Architecture:** Keep one authoritative root README with a strict section hierarchy: overview, topology, quickstart, full setup, operations, troubleshooting, contribution flow, and references. Use command-first instructions with explicit path context and verification checkpoints. Avoid duplicating deep technical docs by linking to existing spec/plan artifacts where detail already exists.
+
+**Tech Stack:** Markdown, Git/GitHub CLI command recipes, shell command verification checkpoints.
+
+---
+
+## File Structure Plan
+
+- Modify: `/mnt/data/ros/README.md` — replace current minimal content with the full professional guidance manual.
+- Verify references only (no content changes expected):
+  - `/mnt/data/ros/docs/superpowers/specs/2026-05-03-master-readme-guidance-design.md`
+  - `/mnt/data/ros/program/research-program-index/README.md`
+  - `/mnt/data/ros/program/benchmark-core/README.md`
+  - `/mnt/data/ros/.gitmodules`
+
+---
+
+### Task 1: Replace README with approved architecture skeleton
+
+**Files:**
+- Modify: `/mnt/data/ros/README.md`
+
+- [ ] **Step 1: Write the new top-level README structure**
+
+Replace `README.md` contents with this exact initial skeleton:
+
+```markdown
 # ROS Program Workspace
 
 Professional operating manual for the ROS parent repository and its managed multi-repo research program.
@@ -36,6 +69,52 @@ It is **not** where all implementation code lives; implementation is distributed
 
 ## 3. Quick Start (10-Minute Path)
 
+## 4. Full Setup (First-Time Environment)
+
+## 5. Day-2 Operations
+
+## 6. Troubleshooting Playbooks
+
+## 7. Contribution Workflow
+
+## 8. Safety, Recovery, and Cleanup
+
+## 9. References
+```
+
+- [ ] **Step 2: Run markdown sanity check by visual scan**
+
+Run:
+
+```bash
+cd /mnt/data/ros
+sed -n '1,140p' README.md
+```
+
+Expected: All section headers `## 1` through `## 9` visible in order; no old duplicate `# ROS` headings remain.
+
+- [ ] **Step 3: Commit skeleton**
+
+```bash
+cd /mnt/data/ros
+git add README.md
+git commit -m "docs: scaffold comprehensive root README structure"
+```
+
+---
+
+### Task 2: Add command-driven onboarding and setup sections
+
+**Files:**
+- Modify: `/mnt/data/ros/README.md`
+
+- [ ] **Step 1: Fill `## 3. Quick Start (10-Minute Path)`**
+
+Under section 3, add exactly:
+
+```markdown
+## 3. Quick Start (10-Minute Path)
+
 Run from a clean terminal:
 
 ```bash
@@ -48,29 +127,28 @@ git submodule update --init --recursive
 Validation checkpoint:
 
 ```bash
-git submodule status -- program/*
+git submodule status
 ```
 
 Expected: 10 `program/*` entries listed with commit SHAs.
+```
 
+- [ ] **Step 2: Fill `## 4. Full Setup (First-Time Environment)`**
+
+Under section 4, add:
+
+```markdown
 ## 4. Full Setup (First-Time Environment)
 
 ### 4.1 Ensure parent repo is current
 
 ```bash
-cd <path-to-your-ROS-clone> || exit 1
-git rev-parse --show-toplevel
-git rev-parse --is-inside-work-tree >/dev/null
-origin_url="$(git remote get-url origin 2>/dev/null || true)"
-printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
+cd /mnt/data/ros
 git checkout main
 git pull --ff-only
 ```
 
-Expected:
-- `git rev-parse --show-toplevel` prints the absolute path to your clone root.
-- Worktree and exact canonical `origin` identity checks pass before branch mutation commands run.
-- `Already up to date.` or fast-forward output.
+Expected: `Already up to date.` or fast-forward output.
 
 ### 4.2 Initialize submodules
 
@@ -85,13 +163,13 @@ Expected: each `program/*` submodule checked out with no errors.
 
 ```bash
 git status --short --branch
-git submodule status -- program/*
+git submodule status
 ```
 
 Expected:
 - parent branch shown (normally `## main`)
 - no unexpected dirty state
-- 10 `program/*` submodule SHAs listed
+- submodule SHAs listed
 
 ### 4.4 GitHub CLI auth (for push/PR operations)
 
@@ -101,7 +179,37 @@ gh repo view molhamfetnah/ROS --json defaultBranchRef
 ```
 
 Expected: authenticated account and default branch details returned.
+```
 
+- [ ] **Step 3: Validate sections render correctly**
+
+```bash
+cd /mnt/data/ros
+sed -n '1,260p' README.md
+```
+
+Expected: Setup sections include command blocks + expected outcomes after each block.
+
+- [ ] **Step 4: Commit onboarding/setup**
+
+```bash
+cd /mnt/data/ros
+git add README.md
+git commit -m "docs: add quickstart and full setup procedures"
+```
+
+---
+
+### Task 3: Add day-2 operations and troubleshooting playbooks
+
+**Files:**
+- Modify: `README.md` (repository root)
+
+- [ ] **Step 1: Fill `## 5. Day-2 Operations` with operational workflows**
+
+Add:
+
+```markdown
 ## 5. Day-2 Operations
 
 ### 5.1 Sync workspace before work
@@ -134,13 +242,11 @@ cd .worktrees/<feature-branch>
 
 ### 5.3 Tracking-system usage (parent repo only)
 
-Install the git tracking shim first, then start a new shell (or source your shell rc file) so the shim is active, and run:
+After shim install, run:
 
 ```bash
 cd <path-to-your-ROS-clone> || exit 1
 git rev-parse --show-toplevel
-scripts/install-git-tracking-shim.sh
-# Start a new shell, or source your shell rc file before continuing.
 git status
 ls -la .tracking
 ```
@@ -161,7 +267,13 @@ git status
 ```
 
 Parent-tracking artifacts should not be created inside submodules.
+```
 
+- [ ] **Step 2: Fill `## 6. Troubleshooting Playbooks`**
+
+Add:
+
+```markdown
 ## 6. Troubleshooting Playbooks
 
 ### Issue A: `No commits between ...` when creating PR in parent repo
@@ -221,7 +333,39 @@ git submodule sync --recursive
 git submodule update --init --recursive
 git submodule status -- program/*
 ```
+```
 
+- [ ] **Step 3: Validate operational/troubleshooting sections**
+
+```bash
+cd <path-to-your-ROS-clone> || exit 1
+grep -n "^## 5\\|^## 6\\|^### Issue" README.md
+grep -n "git submodule status -- program/\\*" README.md
+! grep -n "gh repo edit .*--default-branch" README.md
+```
+
+Expected: section 5/6 headers present, scoped submodule status checks present, and no default-branch mutation command.
+
+- [ ] **Step 4: Commit day-2 + troubleshooting**
+
+```bash
+cd <path-to-your-ROS-clone> || exit 1
+git add README.md
+git commit -m "docs: add day-2 operations and troubleshooting playbooks"
+```
+
+---
+
+### Task 4: Add contribution workflow, safety, and reference map
+
+**Files:**
+- Modify: `README.md` (repository root)
+
+- [ ] **Step 1: Fill `## 7. Contribution Workflow`**
+
+Add:
+
+```markdown
 ## 7. Contribution Workflow
 
 ### 7.1 Branching model
@@ -234,8 +378,6 @@ git submodule status -- program/*
 3. Merge parent PR last.
 
 ### 7.3 Pre-PR checks
-
-Run these checks from the feature worktree that contains your PR changes (not the parent `main` checkout):
 
 ```bash
 cd <path-to-your-feature-worktree> || exit 1
@@ -270,12 +412,16 @@ test "$CURRENT_BRANCH" = "$FEATURE_BRANCH"
 Reserve the parent `main` checkout for sync/cleanup commands only (see section 8.1).
 
 Expected: clean or intentional diff only; test scripts pass.
+```
 
+- [ ] **Step 2: Fill `## 8. Safety, Recovery, and Cleanup`**
+
+Add:
+
+```markdown
 ## 8. Safety, Recovery, and Cleanup
 
 ### 8.1 Safe cleanup
-
-Run cleanup/sync commands from the parent `main` checkout, not from an active feature worktree:
 
 ```bash
 cd <path-to-your-ROS-clone> || exit 1
@@ -314,7 +460,13 @@ git submodule update --init --recursive
 
 ### 8.4 DO NOT use destructive reset without explicit intent
 - Avoid `git reset --hard` unless you explicitly want to discard local work.
+```
 
+- [ ] **Step 3: Fill `## 9. References`**
+
+Add:
+
+```markdown
 ## 9. References
 
 - Design spec: `docs/superpowers/specs/2026-05-03-master-readme-guidance-design.md`
@@ -324,3 +476,42 @@ git submodule update --init --recursive
 - Core subrepos:
   - `program/research-program-index/README.md`
   - `program/benchmark-core/README.md`
+```
+
+- [ ] **Step 4: Validate links and section completeness**
+
+```bash
+cd <path-to-your-ROS-clone> || exit 1
+for p in \
+  docs/superpowers/specs/2026-05-03-master-readme-guidance-design.md \
+  docs/superpowers/plans/2026-05-02-git-status-tracking-implementation.md \
+  docs/superpowers/specs/2026-04-30-repo-architecture-design.md \
+  docs/superpowers/plans/2026-05-03-master-readme-guidance-implementation.md \
+  program/research-program-index/README.md \
+  program/benchmark-core/README.md; do
+  test -f "$p" || { echo "missing: $p"; exit 1; }
+done
+echo "reference-check: PASS"
+```
+
+Expected: `reference-check: PASS`.
+
+- [ ] **Step 5: Commit final README rewrite**
+
+```bash
+cd <path-to-your-ROS-clone> || exit 1
+git add README.md
+git commit -m "docs: publish comprehensive root README operations guide"
+```
+
+---
+
+## Spec Coverage Check (self-review)
+
+1. **Single master README approach:** covered (Tasks 1–4 only modify root README).
+2. **Onboarding + day-2 operations:** covered (Tasks 2 and 3).
+3. **Command-driven with expected checkpoints:** covered throughout each task.
+4. **Parent vs submodule boundaries:** covered in topology, operations, troubleshooting.
+5. **Professional troubleshooting and contribution flow:** covered in Tasks 3 and 4.
+6. **Reference map to deeper docs:** covered in Task 4 references section.
+7. **No placeholders/TBDs:** all sections and command blocks explicitly defined.
