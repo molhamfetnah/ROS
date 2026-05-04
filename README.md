@@ -107,7 +107,8 @@ Expected: authenticated account and default branch details returned.
 ### 5.1 Sync workspace before work
 
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
 git checkout main
 git pull --ff-only
 git submodule sync --recursive
@@ -117,7 +118,8 @@ git submodule update --init --recursive
 ### 5.2 Worktree-based feature workflow
 
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
 git worktree add .worktrees/<feature-branch> -b <feature-branch>
 cd .worktrees/<feature-branch>
 ```
@@ -127,7 +129,8 @@ cd .worktrees/<feature-branch>
 After shim install, run:
 
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
 git status
 ls -la .tracking
 ```
@@ -142,7 +145,8 @@ Expected:
 For submodule-specific work, run commands inside target submodule:
 
 ```bash
-cd /mnt/data/ros/program/research-program-index
+cd <path-to-your-ROS-clone>/program/research-program-index || exit 1
+git rev-parse --show-toplevel
 git status
 ```
 
@@ -156,7 +160,8 @@ Cause: work happened inside submodules, not parent tracked files.
 
 Fix:
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
 git status --short
 git diff --submodule
 ```
@@ -179,19 +184,25 @@ Retry push after protocol switch.
 Check:
 ```bash
 gh repo view molhamfetnah/ROS --json defaultBranchRef
-git branch -a
+gh pr view <pr-number> --json baseRefName,headRefName,url
 ```
 
-Set correct default branch if needed:
+Create PR with explicit base (safe, PR-scoped):
 ```bash
-gh repo edit molhamfetnah/ROS --default-branch main
+gh pr create --base main
+```
+
+Retarget an existing PR base (does not change repository default branch):
+```bash
+gh pr edit <pr-number> --base main
 ```
 
 ### Issue D: Submodule state drift
 
 Fix:
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
 git submodule sync --recursive
 git submodule update --init --recursive
 git submodule status
