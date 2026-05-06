@@ -5,7 +5,12 @@ REPO_ROOT=""
 BRANCH=""
 PORCELAIN_FILE=""
 TRACKING_DIR=""
-MAX_BYTES="${TRACKING_MAX_BYTES:-10485760}"
+TRACKING_MAX_BYTES_RAW="${TRACKING_MAX_BYTES:-}"
+if [[ "$TRACKING_MAX_BYTES_RAW" =~ ^[0-9]+$ ]]; then
+  MAX_BYTES="$TRACKING_MAX_BYTES_RAW"
+else
+  MAX_BYTES="10485760"
+fi
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -36,6 +41,13 @@ if [[ -z "$REPO_ROOT" || -z "$BRANCH" || -z "$PORCELAIN_FILE" || -z "$TRACKING_D
   echo "Missing required args" >&2
   exit 2
 fi
+
+for required_cmd in jq flock; do
+  if ! command -v "$required_cmd" >/dev/null 2>&1; then
+    echo "Missing required command: $required_cmd. Please install '$required_cmd' and retry." >&2
+    exit 2
+  fi
+done
 
 mkdir -p "$TRACKING_DIR"
 LATEST_JSON="$TRACKING_DIR/latest.json"

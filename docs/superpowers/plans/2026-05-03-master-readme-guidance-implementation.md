@@ -203,7 +203,7 @@ git commit -m "docs: add quickstart and full setup procedures"
 ### Task 3: Add day-2 operations and troubleshooting playbooks
 
 **Files:**
-- Modify: `/mnt/data/ros/README.md`
+- Modify: `README.md` (repository root)
 
 - [ ] **Step 1: Fill `## 5. Day-2 Operations` with operational workflows**
 
@@ -215,7 +215,11 @@ Add:
 ### 5.1 Sync workspace before work
 
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
 git checkout main
 git pull --ff-only
 git submodule sync --recursive
@@ -225,8 +229,14 @@ git submodule update --init --recursive
 ### 5.2 Worktree-based feature workflow
 
 ```bash
-cd /mnt/data/ros
-git worktree add .worktrees/<feature-branch> -b <feature-branch>
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
+git checkout main || exit 1
+git pull --ff-only || exit 1
+git worktree add -b <feature-branch> .worktrees/<feature-branch>
 cd .worktrees/<feature-branch>
 ```
 
@@ -235,7 +245,8 @@ cd .worktrees/<feature-branch>
 After shim install, run:
 
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
 git status
 ls -la .tracking
 ```
@@ -250,7 +261,8 @@ Expected:
 For submodule-specific work, run commands inside target submodule:
 
 ```bash
-cd /mnt/data/ros/program/research-program-index
+cd <path-to-your-ROS-clone>/program/research-program-index || exit 1
+git rev-parse --show-toplevel
 git status
 ```
 
@@ -270,7 +282,8 @@ Cause: work happened inside submodules, not parent tracked files.
 
 Fix:
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
 git status --short
 git diff --submodule
 ```
@@ -292,39 +305,51 @@ Retry push after protocol switch.
 
 Check:
 ```bash
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
 gh repo view molhamfetnah/ROS --json defaultBranchRef
-git branch -a
+gh pr view <pr-number> --repo molhamfetnah/ROS --json baseRefName,headRefName,url
 ```
 
-Set correct default branch if needed:
+Create PR with explicit base (safe, PR-scoped):
 ```bash
-gh repo edit molhamfetnah/ROS --default-branch main
+gh pr create --repo molhamfetnah/ROS --base main
+```
+
+Retarget an existing PR base (does not change repository default branch):
+```bash
+gh pr edit <pr-number> --repo molhamfetnah/ROS --base main
 ```
 
 ### Issue D: Submodule state drift
 
 Fix:
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
 git submodule sync --recursive
 git submodule update --init --recursive
-git submodule status
+git submodule status -- program/*
 ```
 ```
 
 - [ ] **Step 3: Validate operational/troubleshooting sections**
 
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
 grep -n "^## 5\\|^## 6\\|^### Issue" README.md
+grep -n "git submodule status -- program/\\*" README.md
+! grep -n "gh repo edit .*--default-branch" README.md
 ```
 
-Expected: section 5/6 headers present and issue playbooks listed.
+Expected: section 5/6 headers present, scoped submodule status checks present, and no default-branch mutation command.
 
 - [ ] **Step 4: Commit day-2 + troubleshooting**
 
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
 git add README.md
 git commit -m "docs: add day-2 operations and troubleshooting playbooks"
 ```
@@ -334,7 +359,7 @@ git commit -m "docs: add day-2 operations and troubleshooting playbooks"
 ### Task 4: Add contribution workflow, safety, and reference map
 
 **Files:**
-- Modify: `/mnt/data/ros/README.md`
+- Modify: `README.md` (repository root)
 
 - [ ] **Step 1: Fill `## 7. Contribution Workflow`**
 
@@ -355,12 +380,36 @@ Add:
 ### 7.3 Pre-PR checks
 
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-feature-worktree> || exit 1
+git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
+FEATURE_BRANCH=<your-feature-branch>
+CURRENT_BRANCH="$(git branch --show-current)"
+test "$CURRENT_BRANCH" != "main"
+test "$CURRENT_BRANCH" = "$FEATURE_BRANCH"
 git status --short --branch
-git submodule status
+git submodule status -- program/*
 bash scripts/tests/test-track-git-status.sh
 bash scripts/tests/test-git-tracking-shim.sh
 ```
+
+Perform final parent-repo updates (submodule pointers/docs) in this same feature worktree branch only before opening the parent PR:
+
+```bash
+cd <path-to-your-feature-worktree> || exit 1
+git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
+FEATURE_BRANCH=<your-feature-branch>
+CURRENT_BRANCH="$(git branch --show-current)"
+test "$CURRENT_BRANCH" != "main"
+test "$CURRENT_BRANCH" = "$FEATURE_BRANCH"
+```
+
+Reserve the parent `main` checkout for sync/cleanup commands only (see section 8.1).
 
 Expected: clean or intentional diff only; test scripts pass.
 ```
@@ -375,7 +424,11 @@ Add:
 ### 8.1 Safe cleanup
 
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
 git checkout main
 git pull --ff-only
 git fetch --prune
@@ -384,6 +437,11 @@ git fetch --prune
 ### 8.2 Remove finished worktree
 
 ```bash
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
 git worktree list
 git worktree remove .worktrees/<feature-branch>
 ```
@@ -391,6 +449,11 @@ git worktree remove .worktrees/<feature-branch>
 ### 8.3 Submodule recovery
 
 ```bash
+cd <path-to-your-ROS-clone> || exit 1
+git rev-parse --show-toplevel
+git rev-parse --is-inside-work-tree >/dev/null
+origin_url="$(git remote get-url origin 2>/dev/null || true)"
+printf '%s\n' "$origin_url" | grep -Eq '^(git@github\.com:molhamfetnah/ROS(\.git)?|https://github\.com/molhamfetnah/ROS(\.git)?)$' || { echo "Error: origin must be molhamfetnah/ROS (SSH or HTTPS)." >&2; exit 1; }
 git submodule sync --recursive
 git submodule update --init --recursive
 ```
@@ -409,7 +472,7 @@ Add:
 - Design spec: `docs/superpowers/specs/2026-05-03-master-readme-guidance-design.md`
 - Tracking implementation plan: `docs/superpowers/plans/2026-05-02-git-status-tracking-implementation.md`
 - Repo architecture spec: `docs/superpowers/specs/2026-04-30-repo-architecture-design.md`
-- Program bootstrap plan: `docs/superpowers/plans/2026-04-30-multi-repo-program-bootstrap.md`
+- Master README implementation plan: `docs/superpowers/plans/2026-05-03-master-readme-guidance-implementation.md`
 - Core subrepos:
   - `program/research-program-index/README.md`
   - `program/benchmark-core/README.md`
@@ -418,12 +481,12 @@ Add:
 - [ ] **Step 4: Validate links and section completeness**
 
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
 for p in \
   docs/superpowers/specs/2026-05-03-master-readme-guidance-design.md \
   docs/superpowers/plans/2026-05-02-git-status-tracking-implementation.md \
   docs/superpowers/specs/2026-04-30-repo-architecture-design.md \
-  docs/superpowers/plans/2026-04-30-multi-repo-program-bootstrap.md \
+  docs/superpowers/plans/2026-05-03-master-readme-guidance-implementation.md \
   program/research-program-index/README.md \
   program/benchmark-core/README.md; do
   test -f "$p" || { echo "missing: $p"; exit 1; }
@@ -436,7 +499,7 @@ Expected: `reference-check: PASS`.
 - [ ] **Step 5: Commit final README rewrite**
 
 ```bash
-cd /mnt/data/ros
+cd <path-to-your-ROS-clone> || exit 1
 git add README.md
 git commit -m "docs: publish comprehensive root README operations guide"
 ```
@@ -452,4 +515,3 @@ git commit -m "docs: publish comprehensive root README operations guide"
 5. **Professional troubleshooting and contribution flow:** covered in Tasks 3 and 4.
 6. **Reference map to deeper docs:** covered in Task 4 references section.
 7. **No placeholders/TBDs:** all sections and command blocks explicitly defined.
-
