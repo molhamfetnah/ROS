@@ -1,0 +1,10 @@
+{
+  "candidates_total": 208,
+  "downloaded": 94,
+  "failed": 114,
+  "unavailable_or_paywalled": 0,
+  "new_downloads_this_retry": 3,
+  "pdf_dir": "/mnt/data/ros/session/artifacts/full_papers_pdf",
+  "index_file": "/mnt/data/ros/session/artifacts/fulltext_download_index.csv",
+  "updated_at": "2026-04-30T13:46:41.093525"
+}

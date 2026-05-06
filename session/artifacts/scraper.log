@@ -1,0 +1,258 @@
+2026-04-30 13:38:34,475 INFO queue=0 workers=4
+2026-04-30 13:38:34,477 INFO completed stage=done done=0 downloaded_new=0
+2026-04-30 13:39:34,897 INFO queue=135 workers=12
+2026-04-30 13:39:36,609 INFO done=1/135 result=failed:exhausted_or_nonpdf title=Using the Bees Algorithm for wheeled mobile robot path planning in an indoor dynamic environment
+2026-04-30 13:39:36,610 INFO done=2/135 result=failed:exhausted_or_nonpdf title=Design and implementation of auto car driving system with collision avoidance
+2026-04-30 13:39:36,611 INFO done=3/135 result=failed:exhausted_or_nonpdf title=UKF-based enhancement and ROS implementation of 4-WDDMR localization with advanced control system
+2026-04-30 13:39:36,613 INFO done=4/135 result=failed:exhausted_or_nonpdf title=Segment-Safe Control Barrier Functions for Model Predictive Control
+2026-04-30 13:39:36,725 INFO done=5/135 result=failed:exhausted_or_nonpdf title=Sensorless induction motor and permanent magnet synchronous motor drives using natural field orientation
+2026-04-30 13:39:36,727 INFO done=6/135 result=failed:exhausted_or_nonpdf title=Recent developments in sensorless and quasi‐sensorless drive
+2026-04-30 13:39:37,045 INFO done=7/135 result=failed:exhausted_or_nonpdf title=Adaptive LQ-Based Computed-Torque Controller for Robotic Manipulator
+2026-04-30 13:39:37,326 INFO done=8/135 result=failed:exhausted_or_nonpdf title=Elimination of position sensors in switched reluctance motor drives: state of the art and future trends
+2026-04-30 13:39:37,862 INFO done=9/135 result=failed:exhausted_or_nonpdf title=Contact-Robust Trajectory Planning via Parametric Sensitivity Analysis for Hybrid Robotic Systems
+2026-04-30 13:39:37,866 INFO done=10/135 result=failed:exhausted_or_nonpdf title=Application of advanced fault-tolerant control techniques in the design of modern electric vehicles for increased reliability: a review
+2026-04-30 13:39:38,007 INFO done=11/135 result=failed:exhausted_or_nonpdf title=Online Identification of PMSM Q-Axis Apparent Inductance Using a PWM-Based Estimator
+2026-04-30 13:39:38,262 INFO done=12/135 result=failed:exhausted_or_nonpdf title=Speed‐Sensorless Model‐Free Predictive Torque Control for Induction Motor Drive
+2026-04-30 13:39:38,859 INFO done=13/135 result=failed:exhausted_or_nonpdf title=Localization and Clustering Based on Swarm Intelligence in UAV Networks for Emergency Communications
+2026-04-30 13:39:39,474 INFO done=14/135 result=failed:exhausted_or_nonpdf title=Clever vermin? Collective intelligence in rats and roaches
+2026-04-30 13:39:39,506 INFO done=15/135 result=failed:exhausted_or_nonpdf title=From Academic Theory to Management Jargon: Exploring the Evolution and Ideology of the Concept of Mindset
+2026-04-30 13:39:39,732 INFO done=16/135 result=failed:exhausted_or_nonpdf title=Fault Diagnosis and Fault-Tolerant Control of PMSM Drives–State of the Art and Future Challenges
+2026-04-30 13:39:39,859 INFO done=17/135 result=failed:exhausted_or_nonpdf title=Fuzzy logic based collision avoidance for a mobile robot
+2026-04-30 13:39:39,909 INFO done=18/135 result=failed:exhausted_or_nonpdf title=Learning-Based Fusion for Robust Multi-Spectral Visual Servoing
+2026-04-30 13:39:40,839 INFO done=19/135 result=failed:exhausted_or_nonpdf title=Real-time Robotic Needle Insertion In Deformable and Moving Structure Using Learning-by-Example Method
+2026-04-30 13:39:41,311 INFO done=20/135 result=failed:exhausted_or_nonpdf title=Trajectory Tracking Control of a Quadcopter UAV Using Nonlinear Control
+2026-04-30 13:39:41,803 INFO done=21/135 result=failed:exhausted_or_nonpdf title=MEASE: Multi-agent Episodic Action Sequence Explanation
+2026-04-30 13:39:41,815 INFO done=22/135 result=failed:exhausted_or_nonpdf title=Off the Hamster Wheel: Rethinking Dialogue Research through a Meta-Analysis of the ACL Anthology 2024
+2026-04-30 13:39:42,387 INFO done=23/135 result=downloaded:https://www.mdpi.com/2226-4310/13/4/370/pdf?version=1776253856 title=Optimization of Low-Altitude Vertiport Network Topology Resilience
+2026-04-30 13:39:42,443 INFO done=24/135 result=failed:exhausted_or_nonpdf title=Sistem Kendali Kecepatan Motor Arus Searah tanpa Sensor Kecepatan dengan Observer Metode R
+2026-04-30 13:39:42,614 INFO done=25/135 result=failed:exhausted_or_nonpdf title=From Passive Sniffing to Active Signal Injection: Exploiting Physical Layer Vulnerabilities in 5G New Radio.
+2026-04-30 13:39:43,190 INFO done=26/135 result=downloaded:https://www.mdpi.com/2504-446X/10/4/285/pdf?version=1776170433 title=Spherical Coordinate System-Based Fusion Path Planning Algorithm for UAVs in Complex Emergency Rescue and Civil Environments
+2026-04-30 13:39:43,229 INFO done=27/135 result=downloaded:https://www.mdpi.com/2571-6255/9/4/160/pdf?version=1775818051 title=Towards Effective Forest Fire Response: A Cloud–Edge Collaborative UAV Deployment Strategy for Rapid Situational Awareness
+2026-04-30 13:39:44,475 INFO done=28/135 result=failed:exhausted_or_nonpdf title=L-System Genetic Encoding for Scalable Neural Network Evolution: A Comparison with Direct Matrix Encoding
+2026-04-30 13:39:45,233 INFO done=29/135 result=failed:exhausted_or_nonpdf title=Adversarial Heterogeneous Agent Learning for Robotic Systems: A Framework for Coordinated Competitive Behaviors
+2026-04-30 13:39:45,282 INFO done=30/135 result=failed:exhausted_or_nonpdf title=Internet of Things: A Survey on Enabling Technologies, Protocols, and Applications
+2026-04-30 13:39:45,764 INFO done=31/135 result=downloaded:https://www.mdpi.com/2079-9292/15/3/602/pdf?version=1769697818 title=Multi-Camera Simultaneous Localization and Mapping for Unmanned Systems: A Survey
+2026-04-30 13:39:45,765 INFO done=32/135 result=downloaded:https://www.mdpi.com/2227-7080/13/12/590/pdf?version=1765792320 title=Optimization of Compressor Preheating to Increase Efficiency, Comfort, and Lifespan
+2026-04-30 13:39:46,958 INFO done=33/135 result=failed:exhausted_or_nonpdf title=Technical and environmental aspects of solar photo-voltaic water pumping systems: a comprehensive survey
+2026-04-30 13:39:47,094 INFO done=34/135 result=failed:exhausted_or_nonpdf title=Internet of Things (IoT) Security Intelligence: A Comprehensive Overview, Machine Learning Solutions and Research Directions
+2026-04-30 13:39:47,571 INFO done=35/135 result=downloaded:https://www.mdpi.com/1996-1073/17/13/3265/pdf?version=1719997317 title=New Opportunities in Real-Time Diagnostics of Induction Machines
+2026-04-30 13:39:48,300 INFO done=36/135 result=downloaded:https://www.mdpi.com/2079-9292/12/11/2541/pdf?version=1685944807 title=Autonomous Drone Electronics Amplified with Pontryagin-Based Optimization
+2026-04-30 13:39:49,532 INFO done=37/135 result=failed:exhausted_or_nonpdf title=Determinants of perception of youth towards mobile banking: imprint from scale construction
+2026-04-30 13:39:49,663 INFO done=38/135 result=failed:exhausted_or_nonpdf title=Sensorless Saliency-Based Control of Dual Induction Machines Under Dynamic Load Imbalances Using Three Current Sensors
+2026-04-30 13:39:49,944 INFO done=39/135 result=downloaded:https://doi.org/10.3390/act15050235 title=Modern Control Meets Machine Learning: A Review and Taxonomy of Synergistic Approaches for Robotics Applications
+2026-04-30 13:39:49,971 INFO done=40/135 result=failed:exhausted_or_nonpdf title=Mobile G2C services typology: The standardized reality in Greek Municipalities
+2026-04-30 13:39:50,605 INFO done=41/135 result=failed:exhausted_or_nonpdf title=Model-free Multivariate Change Point Detection and Localization with Statistical Guarantee
+2026-04-30 13:39:50,982 INFO done=42/135 result=failed:exhausted_or_nonpdf title=An investigative strategy for the iPhone forced entry zero-click exploit for mobile espionage
+2026-04-30 13:39:51,116 INFO done=43/135 result=failed:exhausted_or_nonpdf title=Fractional observer-based model-free controller applied to a cylindrical robot
+2026-04-30 13:39:51,159 INFO done=44/135 result=downloaded:http://hdl.handle.net/2117/15671 title=A new collaborative-shared control strategy for continuous elder/robot assisted navigation
+2026-04-30 13:39:51,309 INFO done=45/135 result=failed:exhausted_or_nonpdf title=Vector Control of AC Drives
+2026-04-30 13:39:51,709 INFO done=46/135 result=failed:exhausted_or_nonpdf title=Concept map-facilitated game-based learning in the mobile era: a systematic review of journal publications from 2009 to 2024
+2026-04-30 13:39:51,711 INFO done=47/135 result=failed:exhausted_or_nonpdf title=Adaptive state augmented backstepping control with NN approximation for 3-DOF robot under backlash like hysteresis
+2026-04-30 13:39:52,305 INFO done=48/135 result=failed:exhausted_or_nonpdf title=Determinants of Engagement with Health Insurance Mobile Apps to Enhance the Quality Of Life
+2026-04-30 13:39:52,307 INFO done=49/135 result=failed:exhausted_or_nonpdf title=Enhancing English language acquisition through mobile technologies: a systematic review and meta-analysis of experimental studies
+2026-04-30 13:39:52,405 INFO done=50/135 result=failed:exhausted_or_nonpdf title=A Finite State Machine Model for Mitigating Mobile Money Social Engineering Attacks
+2026-04-30 13:39:52,818 INFO done=51/135 result=failed:exhausted_or_nonpdf title=Advanced gain-boosted CMOS LDO regulator for enhanced load regulation in RFSoC and mobile systems
+2026-04-30 13:39:53,264 INFO done=52/135 result=downloaded:https://doi.org/10.1504/ijmlo.2027.10076858 title=Examining primary school learners awareness and readiness to utilise mobile devices for self-online learning
+2026-04-30 13:39:53,613 INFO done=53/135 result=failed:exhausted_or_nonpdf title=Integrating mobile games with flipped learning to enhance word- and sentence-level strategies of classical Chinese reading
+2026-04-30 13:39:53,702 INFO done=54/135 result=failed:exhausted_or_nonpdf title=Factors influencing behavioral intention of students to adopt mobile computer supported collaborative learning (mCSCL) in resource-constrained nations: A structural equation modelling approach.
+2026-04-30 13:39:53,708 INFO done=55/135 result=failed:exhausted_or_nonpdf title=Impact d’un stage en unité spécialisée en soins palliatifs sur les représentations des étudiants en soins infirmiers. Étude qualitative au sein d’une équipe mobile de soins palliatifs
+2026-04-30 13:39:53,881 INFO done=56/135 result=failed:exhausted_or_nonpdf title=Dual Mode PID Controller for Path Planning of Encoder Less Mobile Robots in Warehouse Environment
+2026-04-30 13:39:53,998 INFO done=57/135 result=failed:exhausted_or_nonpdf title=Mobile learning adoption in Nigerian universities among computer science students: the role of effort expectancy and social influence
+2026-04-30 13:39:54,209 INFO done=58/135 result=downloaded:https://doi.org/10.46299/isg.2024.1.17 title=Proceedings of the XVII International Scientific and Practical Conference
+2026-04-30 13:39:54,432 INFO done=59/135 result=downloaded:https://doi.org/10.1504/ijmlo.2027.10075574 title=Advancements of robot-assisted language learning in the mobile era: a systematic review and bibliometric analysis
+2026-04-30 13:39:54,893 INFO done=60/135 result=failed:exhausted_or_nonpdf title=Mouse Tracking for Web Marketing: Enhancing User Experience in Web Application Software by Measuring Self-Efficacy and Hesitation Levels
+2026-04-30 13:39:55,153 INFO done=61/135 result=failed:exhausted_or_nonpdf title=How do consumers perceive a/an logotype/emblem in the advertisements: an eye tracking study
+2026-04-30 13:39:55,454 INFO done=62/135 result=failed:exhausted_or_nonpdf title=A Network Model for a Mobile Learning Environment to Track Students' Progress
+2026-04-30 13:39:55,468 INFO done=63/135 result=failed:exhausted_or_nonpdf title=Machine Learning-Based Defect Detection and Classification for Arecanut in Vision-Guided Robot Harvesting
+2026-04-30 13:39:55,941 INFO done=64/135 result=failed:exhausted_or_nonpdf title=Identification and Estimation of General Nonlinear Structured Latent Factor Model for Functional Data
+2026-04-30 13:39:56,033 INFO done=65/135 result=failed:exhausted_or_nonpdf title=Nonlinear Analysis of Nodal Covariates in Network: Dimension Reduction and Clustering
+2026-04-30 13:39:56,373 INFO done=66/135 result=failed:exhausted_or_nonpdf title=Bubble Modeling and Tagging: a Stochastic Nonlinear Autoregression Approach
+2026-04-30 13:39:56,481 INFO done=67/135 result=failed:exhausted_or_nonpdf title=A Non-Regular Icosahedron Geometry Satellite Form, Mirror Invested Polyhedro Heliotrope, For Optical Tracking
+2026-04-30 13:39:56,487 INFO done=68/135 result=failed:exhausted_or_nonpdf title=GA-optimised fuzzy control for trajectory tracking of a 3-DOF robotic manipulator
+2026-04-30 13:39:56,593 INFO done=69/135 result=failed:exhausted_or_nonpdf title=IDESC: a hybrid ESCSO-DDPG algorithm for risk-aware UAV path planning in radar environments
+2026-04-30 13:39:56,785 INFO done=70/135 result=failed:exhausted_or_nonpdf title=Lateral Force Analysis and Deformation Detection Method for Nonlinear Underground Geotechnical Structures
+2026-04-30 13:39:56,878 INFO done=71/135 result=failed:exhausted_or_nonpdf title=On a Flexible Generalized Model Averaging Forecasting of Nonlinear Time Series
+2026-04-30 13:39:57,059 INFO done=72/135 result=failed:exhausted_or_nonpdf title=Contour Based Real Time Multiple Object Tracking
+2026-04-30 13:39:57,263 INFO done=73/135 result=downloaded:https://doi.org/10.54503/0002-3035-2025-61.1-19 title=Nonlinear Self-Focusing of Cosh–Gaussian Laser Beam in Relativistic Plasma with Linear Absorption
+2026-04-30 13:39:57,347 INFO done=74/135 result=failed:exhausted_or_nonpdf title=Tracking the shift: a Delphi-based SWOT analysis of Industry 4.0 in Slovakia
+2026-04-30 13:39:57,606 INFO done=75/135 result=failed:exhausted_or_nonpdf title=Parametric optimisation of neural sliding controller for nonlinear coupling tank plant using central force optimisation algorithm
+2026-04-30 13:39:57,652 INFO done=76/135 result=failed:exhausted_or_nonpdf title=End Trajectory Tracking Control of Flexible Space Manipulator based on Improved RBF Neural Network
+2026-04-30 13:39:57,854 INFO done=77/135 result=failed:exhausted_or_nonpdf title=Solar Photovoltaic System-Fed Battery Charging with Decision-Tree-Assisted Maximum Power Point Tracking
+2026-04-30 13:39:58,094 INFO done=78/135 result=failed:exhausted_or_nonpdf title=Improved artificial neural network approach for solving constrained optimal control of nonlinear fractional-order systems
+2026-04-30 13:39:58,133 INFO done=79/135 result=failed:exhausted_or_nonpdf title=Modelling and optimisation of separately excited DC motor using genetic algorithm and particle swarm optimisation with comparison of PID performance indices
+2026-04-30 13:39:58,870 INFO done=80/135 result=failed:exhausted_or_nonpdf title=Design and meshing characteristics analysis of a harmonic drive three-dimensional tooth profile based on addendum modification
+2026-04-30 13:39:58,904 INFO done=81/135 result=failed:exhausted_or_nonpdf title=AI-Enhanced Nonlinear Economic Modelling for Sports Systems: Linking Material Performance and Cybersecurity Risk in Insurance Cost-Benefit Analysis
+2026-04-30 13:39:59,146 INFO done=82/135 result=failed:exhausted_or_nonpdf title=Can cloud computing adoption drive SME sustainability? Evidence from Nepal
+2026-04-30 13:39:59,205 INFO done=83/135 result=failed:exhausted_or_nonpdf title=Distributed sliding mode observer-based leader-follower synchronisation for affine nonlinear multi-agent chaotic systems with uncertain dynamics
+2026-04-30 13:39:59,275 INFO done=84/135 result=failed:exhausted_or_nonpdf title=Influence of seating position and crash-related factors on passenger injury severity in motor vehicles-involved crashes
+2026-04-30 13:39:59,347 INFO done=85/135 result=failed:exhausted_or_nonpdf title=Tooth profile modification and meshing characteristics for a novel precision movable tooth drive based on logarithmic spiral
+2026-04-30 13:39:59,357 INFO done=86/135 result=failed:exhausted_or_nonpdf title=Untangling the puzzle: how central bank interventions drive currency hyperinflation and hamper SMEs
+2026-04-30 13:39:59,704 INFO done=87/135 result=failed:exhausted_or_nonpdf title=Biological motion perception in social and non‑social contexts: Differential links between fine motor skills and autistic traits
+2026-04-30 13:39:59,713 INFO done=88/135 result=failed:exhausted_or_nonpdf title=Can Electric Vehicles (EVs) Drive our Smart Cities Exploring the Moderating Effect of Support Infrastructure, Model Choice-ability and Resale Value.
+2026-04-30 13:39:59,721 INFO done=89/135 result=failed:exhausted_or_nonpdf title=Latent belief reinforcement learning for online motor imagery classification
+2026-04-30 13:40:00,400 INFO done=90/135 result=failed:exhausted_or_nonpdf title=RecHCA: Hierarchical Context Awareness for one-step sensorless freehand 3D ultrasound reconstruction
+2026-04-30 13:40:00,402 INFO done=91/135 result=failed:exhausted_or_nonpdf title=Buffering rescue and microbial functional redundancy drive the synergy in ternary co-digestion of food waste, fallen leaves, and sewage sludge
+2026-04-30 13:40:00,686 INFO done=92/135 result=failed:exhausted_or_nonpdf title=Delivery of CDNF in collagen hydrogels modulates N-glycosylation while improving motor function in a rodent model of Parkinson's disease
+2026-04-30 13:40:00,688 INFO done=93/135 result=failed:exhausted_or_nonpdf title=Utilizing the Herrmann finite elements for assessing the deformation of viscoelastic solid rocket motor propellant grains
+2026-04-30 13:40:00,741 INFO done=94/135 result=failed:exhausted_or_nonpdf title=Elevational and anthropogenic gradients drive divergent assembly mechanisms of free-living and particle-attached bacterioplankton in Chinese lakes
+2026-04-30 13:40:01,042 INFO done=95/135 result=failed:exhausted_or_nonpdf title=Electromagnetic and Thermal Design of Partially HTS Linear Motor: Analysis of Thrust Ripple Harmonics and Thermal Optimization
+2026-04-30 13:40:01,043 INFO done=96/135 result=failed:exhausted_or_nonpdf title=Bacterial community composition and network complexity drive microbial and plant-derived carbon accumulation with long-term manure application
+2026-04-30 13:40:01,235 INFO done=97/135 result=failed:exhausted_or_nonpdf title=Joint state and parameter estimation for Anaerobic Digestion using PSO - tuned EKF based on the modified AMOCO model
+2026-04-30 13:40:01,250 INFO done=98/135 result=failed:exhausted_or_nonpdf title=Will you trust and drive like your automated vehicle? Effects of human–vehicle driving style matching on subjective experience and subsequent manual driving
+2026-04-30 13:40:01,269 INFO done=99/135 result=failed:exhausted_or_nonpdf title=Configuration innovation and unified/accurate dynamics modelling methodology for spatial multi-drive mode parallel mechanism
+2026-04-30 13:40:02,219 INFO done=100/135 result=failed:exhausted_or_nonpdf title=A Hybrid PSO - SVM Algorithm for Enhanced Nodule Classification in CT Scans: Advancing Lung Cancer Diagnosis
+2026-04-30 13:40:02,382 INFO done=101/135 result=failed:exhausted_or_nonpdf title=Deep Learning and Feature Optimisation Algorithm for Course Recommendation Systems
+2026-04-30 13:40:02,393 INFO done=102/135 result=failed:exhausted_or_nonpdf title=A Primal Dual Active Set with Continuation Algorithm for ℓ0-penalized High-dimensional Accelerated Failure Time Model
+2026-04-30 13:40:02,595 INFO done=103/135 result=failed:exhausted_or_nonpdf title=Technology-Based Start-Ups Mapping: a Bibliometric Study and Prospective Research Path
+2026-04-30 13:40:02,787 INFO done=104/135 result=failed:exhausted_or_nonpdf title=Bi-optimal Quantile-based Test Planning for Accelerated Degradation Test Based on Wiener Process
+2026-04-30 13:40:02,943 INFO done=105/135 result=failed:exhausted_or_nonpdf title=Tests on Dynamic Ranking
+2026-04-30 13:40:03,230 INFO done=106/135 result=failed:exhausted_or_nonpdf title=Hospital admissions via the emergency department: implications for planning and patient flow.
+2026-04-30 13:40:03,555 INFO done=107/135 result=failed:exhausted_or_nonpdf title=Optimising the location of EV public charging stations in electrical distribution system using Giza Pyramid construction algorithm
+2026-04-30 13:40:03,624 INFO done=108/135 result=failed:exhausted_or_nonpdf title=Navigating retirement financial planning literature: a PRISMA complaint systematic approach
+2026-04-30 13:40:03,774 INFO done=109/135 result=failed:exhausted_or_nonpdf title=Optimising Accuracy Rate of Genomic Image Representation of Human Corona Virus Sequences for COVID-19 Detection using Modified Quantum-Based Marine Predators Algorithm
+2026-04-30 13:40:03,848 INFO done=110/135 result=failed:exhausted_or_nonpdf title=Management accounting of TQM practices on organisations performance: a moderating role of strategic planning
+2026-04-30 13:40:04,134 INFO done=111/135 result=failed:exhausted_or_nonpdf title=A Hybrid SSA-BBO Algorithm for the Optimisation of Multi-Layer Perceptron Training
+2026-04-30 13:40:04,136 INFO done=112/135 result=failed:exhausted_or_nonpdf title=A Locally Adaptive Algorithm for Multiple Testing with Network Structure
+2026-04-30 13:40:04,553 INFO done=113/135 result=failed:exhausted_or_nonpdf title=Big Data Clustering Analysis Based on Improved K-means Algorithm
+2026-04-30 13:40:05,066 INFO done=114/135 result=failed:exhausted_or_nonpdf title=Learner profiles and the process of Learning in the Higher Educational Context
+2026-04-30 13:40:05,194 INFO done=115/135 result=failed:exhausted_or_nonpdf title=WEB-BASED COLLABORATIVE LEARNING AND KNOWLEDGE SHARING IN INFORMAL BUSINESS NETWORKS
+2026-04-30 13:40:05,457 INFO done=116/135 result=failed:exhausted_or_nonpdf title=Theory of Planned Behaviour: the Intention-Behaviour Relationship and the Perceived Behavioural Control (PBC) Relationship with Intention and Behaviour
+2026-04-30 13:40:06,103 INFO done=117/135 result=failed:exhausted_or_nonpdf title=Are the mosquito and vector control programs economic effective?
+2026-04-30 13:40:06,426 INFO done=118/135 result=failed:exhausted_or_nonpdf title=Phishing detection based on Harris Hawks optimisation algorithm and web-based ontology
+2026-04-30 13:40:06,469 INFO done=119/135 result=downloaded:https://doi.org/10.1504/ijart.2027.10076014 title=Cross-Platform Music Recommendation Method and Innovation Path Based on the Internet of Things and Blockchain
+2026-04-30 13:40:06,595 INFO done=120/135 result=downloaded:https://doi.org/10.21276/ijchmr.2016.2.2.07 title=Comparison of Locus of Control Behaviour Scores in Normal and Individuals with stuttering – A new way to Approach Stuttering Disorder for Speech – Language Pathologists
+2026-04-30 13:40:06,653 INFO done=121/135 result=failed:exhausted_or_nonpdf title=Generative adaptive resilience: LLM-MILP modeling and strategy generation for port vessel scheduling
+2026-04-30 13:40:06,823 INFO done=122/135 result=failed:exhausted_or_nonpdf title=Integration of Biomechanics and Digital Technology: Using Kinovea for Motion Analysis and Learning for Beginner Athletes
+2026-04-30 13:40:07,461 INFO done=123/135 result=failed:exhausted_or_nonpdf title=Sparsity Learning via Structured Functional Factor Augmentation
+2026-04-30 13:40:07,510 INFO done=124/135 result=downloaded:https://doi.org/10.1038/scientificamerican072077-axs4kzsdvehyqhomb7gkv title=We Cannot Cede Control of Weapons to Artificial Intelligence
+2026-04-30 13:40:07,688 INFO done=125/135 result=failed:exhausted_or_nonpdf title=COVID-19 and FinTech market efficiency: a test of adaptive market hypothesis
+2026-04-30 13:40:07,759 INFO done=126/135 result=failed:exhausted_or_nonpdf title=Enhancing IoT Ecosystems with Adaptive Wireless Sensor Networks: Challenges and Solutions
+2026-04-30 13:40:07,874 INFO done=127/135 result=failed:exhausted_or_nonpdf title=Left Ventricle Extraction Using a DENSENET-U-Net Integrated Deep Learning Approach
+2026-04-30 13:40:08,307 INFO done=128/135 result=failed:exhausted_or_nonpdf title=Communication-Efficient Estimation of Regularized Smoothed Support Tensor Machine
+2026-04-30 13:40:08,470 INFO done=129/135 result=failed:exhausted_or_nonpdf title=Study on dynamic of chemical components of Rhizoma Alismatis and Evodia rutaecarpa in their compatibility
+2026-04-30 13:40:08,576 INFO done=130/135 result=failed:exhausted_or_nonpdf title=Zero-Day Intrusion Detection System: Training on Small Datasets with Advanced Data Augmentation and Ensemble Learning
+2026-04-30 13:40:08,819 INFO done=131/135 result=failed:exhausted_or_nonpdf title=Distributed Algorithms for High-Dimensional Statistical Inference and Structure Learning with Heterogeneous Data
+2026-04-30 13:40:12,981 INFO done=132/135 result=downloaded:https://doi.org/10.71126/nijre.v2i1.16 title=Transforming Education through Technology: The Case of COVID 19 Digital Learning in Nagaland
+2026-04-30 13:40:25,740 INFO done=133/135 result=downloaded:https://www.jstage.jst.go.jp/article/transele/advpub/0/advpub_2025ECP5076/_pdf title=A Sensorless Control of PMSM Using Hybrid Fuzzy-Logic Adaptive Sliding Mode Approach
+2026-04-30 13:40:26,184 INFO done=134/135 result=failed:exhausted_or_nonpdf title=Machine Learning Application for SAIs
+2026-04-30 13:40:56,531 INFO done=135/135 result=failed:exhausted_or_nonpdf title=Analysis of Modern Approaches to Autonomous UAV Navigation
+2026-04-30 13:40:56,533 INFO completed stage=done done=135 downloaded_new=18
+2026-04-30 13:45:16,885 INFO queue=117 workers=12
+2026-04-30 13:45:20,952 INFO done=1/117 result=failed:exhausted_or_nonpdf title=Design and implementation of auto car driving system with collision avoidance
+2026-04-30 13:45:22,085 INFO done=2/117 result=failed:exhausted_or_nonpdf title=Contact-Robust Trajectory Planning via Parametric Sensitivity Analysis for Hybrid Robotic Systems
+2026-04-30 13:45:23,144 INFO done=3/117 result=failed:exhausted_or_nonpdf title=Fault Diagnosis and Fault-Tolerant Control of PMSM Drives–State of the Art and Future Challenges
+2026-04-30 13:45:23,301 INFO done=4/117 result=failed:exhausted_or_nonpdf title=Elimination of position sensors in switched reluctance motor drives: state of the art and future trends
+2026-04-30 13:45:23,329 INFO done=5/117 result=failed:exhausted_or_nonpdf title=Recent developments in sensorless and quasi‐sensorless drive
+2026-04-30 13:45:23,410 INFO done=6/117 result=failed:exhausted_or_nonpdf title=Online Identification of PMSM Q-Axis Apparent Inductance Using a PWM-Based Estimator
+2026-04-30 13:45:23,527 INFO done=7/117 result=failed:exhausted_or_nonpdf title=UKF-based enhancement and ROS implementation of 4-WDDMR localization with advanced control system
+2026-04-30 13:45:23,586 INFO done=8/117 result=failed:exhausted_or_nonpdf title=Using the Bees Algorithm for wheeled mobile robot path planning in an indoor dynamic environment
+2026-04-30 13:45:23,617 INFO done=9/117 result=failed:exhausted_or_nonpdf title=Sensorless induction motor and permanent magnet synchronous motor drives using natural field orientation
+2026-04-30 13:45:23,919 INFO done=10/117 result=failed:exhausted_or_nonpdf title=Segment-Safe Control Barrier Functions for Model Predictive Control
+2026-04-30 13:45:24,191 INFO done=11/117 result=failed:exhausted_or_nonpdf title=Adaptive LQ-Based Computed-Torque Controller for Robotic Manipulator
+2026-04-30 13:45:24,275 INFO done=12/117 result=failed:exhausted_or_nonpdf title=Application of advanced fault-tolerant control techniques in the design of modern electric vehicles for increased reliability: a review
+2026-04-30 13:45:24,319 INFO done=13/117 result=failed:exhausted_or_nonpdf title=Learning-Based Fusion for Robust Multi-Spectral Visual Servoing
+2026-04-30 13:45:24,459 INFO done=14/117 result=failed:exhausted_or_nonpdf title=Trajectory Tracking Control of a Quadcopter UAV Using Nonlinear Control
+2026-04-30 13:45:24,799 INFO done=15/117 result=failed:exhausted_or_nonpdf title=Speed‐Sensorless Model‐Free Predictive Torque Control for Induction Motor Drive
+2026-04-30 13:45:24,963 INFO done=16/117 result=failed:exhausted_or_nonpdf title=Clever vermin? Collective intelligence in rats and roaches
+2026-04-30 13:45:25,300 INFO done=17/117 result=failed:exhausted_or_nonpdf title=Real-time Robotic Needle Insertion In Deformable and Moving Structure Using Learning-by-Example Method
+2026-04-30 13:45:25,325 INFO done=18/117 result=failed:exhausted_or_nonpdf title=Localization and Clustering Based on Swarm Intelligence in UAV Networks for Emergency Communications
+2026-04-30 13:45:25,404 INFO done=19/117 result=failed:exhausted_or_nonpdf title=Off the Hamster Wheel: Rethinking Dialogue Research through a Meta-Analysis of the ACL Anthology 2024
+2026-04-30 13:45:25,883 INFO done=20/117 result=failed:exhausted_or_nonpdf title=From Academic Theory to Management Jargon: Exploring the Evolution and Ideology of the Concept of Mindset
+2026-04-30 13:45:26,004 INFO done=21/117 result=failed:exhausted_or_nonpdf title=Fuzzy logic based collision avoidance for a mobile robot
+2026-04-30 13:45:26,576 INFO done=22/117 result=failed:exhausted_or_nonpdf title=From Passive Sniffing to Active Signal Injection: Exploiting Physical Layer Vulnerabilities in 5G New Radio.
+2026-04-30 13:45:26,808 INFO done=23/117 result=failed:exhausted_or_nonpdf title=MEASE: Multi-agent Episodic Action Sequence Explanation
+2026-04-30 13:45:27,252 INFO done=24/117 result=failed:exhausted_or_nonpdf title=Sistem Kendali Kecepatan Motor Arus Searah tanpa Sensor Kecepatan dengan Observer Metode R
+2026-04-30 13:45:27,675 INFO done=25/117 result=failed:exhausted_or_nonpdf title=Technical and environmental aspects of solar photo-voltaic water pumping systems: a comprehensive survey
+2026-04-30 13:45:27,853 INFO done=26/117 result=failed:exhausted_or_nonpdf title=Vector Control of AC Drives
+2026-04-30 13:45:27,905 INFO done=27/117 result=failed:exhausted_or_nonpdf title=L-System Genetic Encoding for Scalable Neural Network Evolution: A Comparison with Direct Matrix Encoding
+2026-04-30 13:45:28,283 INFO done=28/117 result=failed:exhausted_or_nonpdf title=Impact d’un stage en unité spécialisée en soins palliatifs sur les représentations des étudiants en soins infirmiers. Étude qualitative au sein d’une équipe mobile de soins palliatifs
+2026-04-30 13:45:28,632 INFO done=29/117 result=failed:exhausted_or_nonpdf title=Adversarial Heterogeneous Agent Learning for Robotic Systems: A Framework for Coordinated Competitive Behaviors
+2026-04-30 13:45:28,798 INFO done=30/117 result=failed:exhausted_or_nonpdf title=Internet of Things: A Survey on Enabling Technologies, Protocols, and Applications
+2026-04-30 13:45:28,947 INFO done=31/117 result=failed:exhausted_or_nonpdf title=Model-free Multivariate Change Point Detection and Localization with Statistical Guarantee
+2026-04-30 13:45:28,986 INFO done=32/117 result=failed:exhausted_or_nonpdf title=Sensorless Saliency-Based Control of Dual Induction Machines Under Dynamic Load Imbalances Using Three Current Sensors
+2026-04-30 13:45:29,029 INFO done=33/117 result=failed:exhausted_or_nonpdf title=Determinants of perception of youth towards mobile banking: imprint from scale construction
+2026-04-30 13:45:29,091 INFO done=34/117 result=failed:exhausted_or_nonpdf title=Concept map-facilitated game-based learning in the mobile era: a systematic review of journal publications from 2009 to 2024
+2026-04-30 13:45:29,163 INFO done=35/117 result=failed:exhausted_or_nonpdf title=Mobile G2C services typology: The standardized reality in Greek Municipalities
+2026-04-30 13:45:29,279 INFO done=36/117 result=failed:exhausted_or_nonpdf title=An investigative strategy for the iPhone forced entry zero-click exploit for mobile espionage
+2026-04-30 13:45:29,571 INFO done=37/117 result=failed:exhausted_or_nonpdf title=Fractional observer-based model-free controller applied to a cylindrical robot
+2026-04-30 13:45:29,724 INFO done=38/117 result=failed:exhausted_or_nonpdf title=Internet of Things (IoT) Security Intelligence: A Comprehensive Overview, Machine Learning Solutions and Research Directions
+2026-04-30 13:45:29,911 INFO done=39/117 result=failed:exhausted_or_nonpdf title=Dual Mode PID Controller for Path Planning of Encoder Less Mobile Robots in Warehouse Environment
+2026-04-30 13:45:29,987 INFO done=40/117 result=failed:exhausted_or_nonpdf title=Adaptive state augmented backstepping control with NN approximation for 3-DOF robot under backlash like hysteresis
+2026-04-30 13:45:30,279 INFO done=41/117 result=failed:exhausted_or_nonpdf title=Factors influencing behavioral intention of students to adopt mobile computer supported collaborative learning (mCSCL) in resource-constrained nations: A structural equation modelling approach.
+2026-04-30 13:45:30,379 INFO done=42/117 result=failed:exhausted_or_nonpdf title=A Finite State Machine Model for Mitigating Mobile Money Social Engineering Attacks
+2026-04-30 13:45:30,430 INFO done=43/117 result=failed:exhausted_or_nonpdf title=Integrating mobile games with flipped learning to enhance word- and sentence-level strategies of classical Chinese reading
+2026-04-30 13:45:30,651 INFO done=44/117 result=failed:exhausted_or_nonpdf title=Machine Learning-Based Defect Detection and Classification for Arecanut in Vision-Guided Robot Harvesting
+2026-04-30 13:45:30,794 INFO done=45/117 result=failed:exhausted_or_nonpdf title=Mobile learning adoption in Nigerian universities among computer science students: the role of effort expectancy and social influence
+2026-04-30 13:45:31,031 INFO done=46/117 result=failed:exhausted_or_nonpdf title=A Network Model for a Mobile Learning Environment to Track Students' Progress
+2026-04-30 13:45:31,479 INFO done=47/117 result=failed:exhausted_or_nonpdf title=How do consumers perceive a/an logotype/emblem in the advertisements: an eye tracking study
+2026-04-30 13:45:31,518 INFO done=48/117 result=failed:exhausted_or_nonpdf title=A Non-Regular Icosahedron Geometry Satellite Form, Mirror Invested Polyhedro Heliotrope, For Optical Tracking
+2026-04-30 13:45:31,521 INFO done=49/117 result=failed:exhausted_or_nonpdf title=Mouse Tracking for Web Marketing: Enhancing User Experience in Web Application Software by Measuring Self-Efficacy and Hesitation Levels
+2026-04-30 13:45:32,067 INFO done=50/117 result=failed:exhausted_or_nonpdf title=Identification and Estimation of General Nonlinear Structured Latent Factor Model for Functional Data
+2026-04-30 13:45:32,387 INFO done=51/117 result=failed:exhausted_or_nonpdf title=Determinants of Engagement with Health Insurance Mobile Apps to Enhance the Quality Of Life
+2026-04-30 13:45:32,389 INFO done=52/117 result=downloaded:https://doi.org/10.1504/ijmlo.2027.10076362 title=Enhancing English language acquisition through mobile technologies: a systematic review and meta-analysis of experimental studies
+2026-04-30 13:45:32,402 INFO done=53/117 result=failed:exhausted_or_nonpdf title=Nonlinear Analysis of Nodal Covariates in Network: Dimension Reduction and Clustering
+2026-04-30 13:45:32,659 INFO done=54/117 result=failed:exhausted_or_nonpdf title=Lateral Force Analysis and Deformation Detection Method for Nonlinear Underground Geotechnical Structures
+2026-04-30 13:45:32,660 INFO done=55/117 result=failed:exhausted_or_nonpdf title=IDESC: a hybrid ESCSO-DDPG algorithm for risk-aware UAV path planning in radar environments
+2026-04-30 13:45:32,768 INFO done=56/117 result=failed:exhausted_or_nonpdf title=Bubble Modeling and Tagging: a Stochastic Nonlinear Autoregression Approach
+2026-04-30 13:45:33,042 INFO done=57/117 result=downloaded:https://doi.org/10.1504/ijaac.2027.10075192 title=Advanced gain-boosted CMOS LDO regulator for enhanced load regulation in RFSoC and mobile systems
+2026-04-30 13:45:33,363 INFO done=58/117 result=failed:exhausted_or_nonpdf title=Tracking the shift: a Delphi-based SWOT analysis of Industry 4.0 in Slovakia
+2026-04-30 13:45:33,418 INFO done=59/117 result=failed:exhausted_or_nonpdf title=On a Flexible Generalized Model Averaging Forecasting of Nonlinear Time Series
+2026-04-30 13:45:33,583 INFO done=60/117 result=failed:exhausted_or_nonpdf title=Contour Based Real Time Multiple Object Tracking
+2026-04-30 13:45:33,723 INFO done=61/117 result=failed:exhausted_or_nonpdf title=Parametric optimisation of neural sliding controller for nonlinear coupling tank plant using central force optimisation algorithm
+2026-04-30 13:45:33,828 INFO done=62/117 result=failed:exhausted_or_nonpdf title=Improved artificial neural network approach for solving constrained optimal control of nonlinear fractional-order systems
+2026-04-30 13:45:34,152 INFO done=63/117 result=failed:exhausted_or_nonpdf title=Can Electric Vehicles (EVs) Drive our Smart Cities Exploring the Moderating Effect of Support Infrastructure, Model Choice-ability and Resale Value.
+2026-04-30 13:45:34,442 INFO done=64/117 result=failed:exhausted_or_nonpdf title=Modelling and optimisation of separately excited DC motor using genetic algorithm and particle swarm optimisation with comparison of PID performance indices
+2026-04-30 13:45:34,975 INFO done=65/117 result=failed:exhausted_or_nonpdf title=GA-optimised fuzzy control for trajectory tracking of a 3-DOF robotic manipulator
+2026-04-30 13:45:35,139 INFO done=66/117 result=failed:exhausted_or_nonpdf title=Tooth profile modification and meshing characteristics for a novel precision movable tooth drive based on logarithmic spiral
+2026-04-30 13:45:35,140 INFO done=67/117 result=failed:exhausted_or_nonpdf title=Design and meshing characteristics analysis of a harmonic drive three-dimensional tooth profile based on addendum modification
+2026-04-30 13:45:35,267 INFO done=68/117 result=failed:exhausted_or_nonpdf title=Can cloud computing adoption drive SME sustainability? Evidence from Nepal
+2026-04-30 13:45:35,595 INFO done=69/117 result=failed:exhausted_or_nonpdf title=Influence of seating position and crash-related factors on passenger injury severity in motor vehicles-involved crashes
+2026-04-30 13:45:35,859 INFO done=70/117 result=failed:exhausted_or_nonpdf title=AI-Enhanced Nonlinear Economic Modelling for Sports Systems: Linking Material Performance and Cybersecurity Risk in Insurance Cost-Benefit Analysis
+2026-04-30 13:45:35,862 INFO done=71/117 result=failed:exhausted_or_nonpdf title=Latent belief reinforcement learning for online motor imagery classification
+2026-04-30 13:45:35,921 INFO done=72/117 result=failed:exhausted_or_nonpdf title=Distributed sliding mode observer-based leader-follower synchronisation for affine nonlinear multi-agent chaotic systems with uncertain dynamics
+2026-04-30 13:45:36,135 INFO done=73/117 result=failed:exhausted_or_nonpdf title=End Trajectory Tracking Control of Flexible Space Manipulator based on Improved RBF Neural Network
+2026-04-30 13:45:36,403 INFO done=74/117 result=failed:exhausted_or_nonpdf title=Biological motion perception in social and non‑social contexts: Differential links between fine motor skills and autistic traits
+2026-04-30 13:45:36,559 INFO done=75/117 result=failed:exhausted_or_nonpdf title=Solar Photovoltaic System-Fed Battery Charging with Decision-Tree-Assisted Maximum Power Point Tracking
+2026-04-30 13:45:36,655 INFO done=76/117 result=failed:exhausted_or_nonpdf title=RecHCA: Hierarchical Context Awareness for one-step sensorless freehand 3D ultrasound reconstruction
+2026-04-30 13:45:36,656 INFO done=77/117 result=failed:exhausted_or_nonpdf title=Buffering rescue and microbial functional redundancy drive the synergy in ternary co-digestion of food waste, fallen leaves, and sewage sludge
+2026-04-30 13:45:36,787 INFO done=78/117 result=failed:exhausted_or_nonpdf title=Delivery of CDNF in collagen hydrogels modulates N-glycosylation while improving motor function in a rodent model of Parkinson's disease
+2026-04-30 13:45:37,068 INFO done=79/117 result=failed:exhausted_or_nonpdf title=Utilizing the Herrmann finite elements for assessing the deformation of viscoelastic solid rocket motor propellant grains
+2026-04-30 13:45:37,299 INFO done=80/117 result=failed:exhausted_or_nonpdf title=Elevational and anthropogenic gradients drive divergent assembly mechanisms of free-living and particle-attached bacterioplankton in Chinese lakes
+2026-04-30 13:45:37,435 INFO done=81/117 result=failed:exhausted_or_nonpdf title=Bacterial community composition and network complexity drive microbial and plant-derived carbon accumulation with long-term manure application
+2026-04-30 13:45:37,563 INFO done=82/117 result=failed:exhausted_or_nonpdf title=Will you trust and drive like your automated vehicle? Effects of human–vehicle driving style matching on subjective experience and subsequent manual driving
+2026-04-30 13:45:37,631 INFO done=83/117 result=failed:exhausted_or_nonpdf title=Electromagnetic and Thermal Design of Partially HTS Linear Motor: Analysis of Thrust Ripple Harmonics and Thermal Optimization
+2026-04-30 13:45:37,883 INFO done=84/117 result=failed:exhausted_or_nonpdf title=Joint state and parameter estimation for Anaerobic Digestion using PSO - tuned EKF based on the modified AMOCO model
+2026-04-30 13:45:37,951 INFO done=85/117 result=failed:exhausted_or_nonpdf title=Navigating retirement financial planning literature: a PRISMA complaint systematic approach
+2026-04-30 13:45:38,040 INFO done=86/117 result=failed:exhausted_or_nonpdf title=Configuration innovation and unified/accurate dynamics modelling methodology for spatial multi-drive mode parallel mechanism
+2026-04-30 13:45:38,551 INFO done=87/117 result=failed:exhausted_or_nonpdf title=Management accounting of TQM practices on organisations performance: a moderating role of strategic planning
+2026-04-30 13:45:38,553 INFO done=88/117 result=failed:exhausted_or_nonpdf title=Untangling the puzzle: how central bank interventions drive currency hyperinflation and hamper SMEs
+2026-04-30 13:45:38,715 INFO done=89/117 result=failed:exhausted_or_nonpdf title=A Primal Dual Active Set with Continuation Algorithm for ℓ0-penalized High-dimensional Accelerated Failure Time Model
+2026-04-30 13:45:38,791 INFO done=90/117 result=failed:exhausted_or_nonpdf title=Hospital admissions via the emergency department: implications for planning and patient flow.
+2026-04-30 13:45:39,000 INFO done=91/117 result=failed:exhausted_or_nonpdf title=Technology-Based Start-Ups Mapping: a Bibliometric Study and Prospective Research Path
+2026-04-30 13:45:39,155 INFO done=92/117 result=failed:exhausted_or_nonpdf title=Phishing detection based on Harris Hawks optimisation algorithm and web-based ontology
+2026-04-30 13:45:39,163 INFO done=93/117 result=failed:exhausted_or_nonpdf title=Bi-optimal Quantile-based Test Planning for Accelerated Degradation Test Based on Wiener Process
+2026-04-30 13:45:39,209 INFO done=94/117 result=failed:exhausted_or_nonpdf title=Deep Learning and Feature Optimisation Algorithm for Course Recommendation Systems
+2026-04-30 13:45:39,291 INFO done=95/117 result=failed:exhausted_or_nonpdf title=Tests on Dynamic Ranking
+2026-04-30 13:45:39,671 INFO done=96/117 result=failed:exhausted_or_nonpdf title=Optimising the location of EV public charging stations in electrical distribution system using Giza Pyramid construction algorithm
+2026-04-30 13:45:39,799 INFO done=97/117 result=failed:exhausted_or_nonpdf title=Optimising Accuracy Rate of Genomic Image Representation of Human Corona Virus Sequences for COVID-19 Detection using Modified Quantum-Based Marine Predators Algorithm
+2026-04-30 13:45:39,845 INFO done=98/117 result=failed:exhausted_or_nonpdf title=A Hybrid SSA-BBO Algorithm for the Optimisation of Multi-Layer Perceptron Training
+2026-04-30 13:45:40,183 INFO done=99/117 result=failed:exhausted_or_nonpdf title=A Locally Adaptive Algorithm for Multiple Testing with Network Structure
+2026-04-30 13:45:40,427 INFO done=100/117 result=failed:exhausted_or_nonpdf title=A Hybrid PSO - SVM Algorithm for Enhanced Nodule Classification in CT Scans: Advancing Lung Cancer Diagnosis
+2026-04-30 13:45:40,570 INFO done=101/117 result=failed:exhausted_or_nonpdf title=Learner profiles and the process of Learning in the Higher Educational Context
+2026-04-30 13:45:40,621 INFO done=102/117 result=failed:exhausted_or_nonpdf title=WEB-BASED COLLABORATIVE LEARNING AND KNOWLEDGE SHARING IN INFORMAL BUSINESS NETWORKS
+2026-04-30 13:45:40,805 INFO done=103/117 result=failed:exhausted_or_nonpdf title=Theory of Planned Behaviour: the Intention-Behaviour Relationship and the Perceived Behavioural Control (PBC) Relationship with Intention and Behaviour
+2026-04-30 13:45:41,380 INFO done=104/117 result=failed:exhausted_or_nonpdf title=Study on dynamic of chemical components of Rhizoma Alismatis and Evodia rutaecarpa in their compatibility
+2026-04-30 13:45:41,430 INFO done=105/117 result=failed:exhausted_or_nonpdf title=Generative adaptive resilience: LLM-MILP modeling and strategy generation for port vessel scheduling
+2026-04-30 13:45:41,544 INFO done=106/117 result=failed:exhausted_or_nonpdf title=Integration of Biomechanics and Digital Technology: Using Kinovea for Motion Analysis and Learning for Beginner Athletes
+2026-04-30 13:45:41,691 INFO done=107/117 result=failed:exhausted_or_nonpdf title=Big Data Clustering Analysis Based on Improved K-means Algorithm
+2026-04-30 13:45:41,697 INFO done=108/117 result=failed:exhausted_or_nonpdf title=Are the mosquito and vector control programs economic effective?
+2026-04-30 13:45:41,843 INFO done=109/117 result=failed:exhausted_or_nonpdf title=Left Ventricle Extraction Using a DENSENET-U-Net Integrated Deep Learning Approach
+2026-04-30 13:45:42,510 INFO done=110/117 result=failed:exhausted_or_nonpdf title=Communication-Efficient Estimation of Regularized Smoothed Support Tensor Machine
+2026-04-30 13:45:43,557 INFO done=111/117 result=failed:exhausted_or_nonpdf title=Enhancing IoT Ecosystems with Adaptive Wireless Sensor Networks: Challenges and Solutions
+2026-04-30 13:45:44,125 INFO done=112/117 result=failed:exhausted_or_nonpdf title=Sparsity Learning via Structured Functional Factor Augmentation
+2026-04-30 13:45:44,577 INFO done=113/117 result=failed:exhausted_or_nonpdf title=Zero-Day Intrusion Detection System: Training on Small Datasets with Advanced Data Augmentation and Ensemble Learning
+2026-04-30 13:45:45,084 INFO done=114/117 result=failed:exhausted_or_nonpdf title=COVID-19 and FinTech market efficiency: a test of adaptive market hypothesis
+2026-04-30 13:45:45,525 INFO done=115/117 result=failed:exhausted_or_nonpdf title=Distributed Algorithms for High-Dimensional Statistical Inference and Structure Learning with Heterogeneous Data
+2026-04-30 13:45:55,390 INFO done=116/117 result=downloaded:https://doi.org/10.56251/watu4873 title=Machine Learning Application for SAIs
+2026-04-30 13:46:41,092 INFO done=117/117 result=failed:exhausted_or_nonpdf title=Analysis of Modern Approaches to Autonomous UAV Navigation
+2026-04-30 13:46:41,093 INFO completed stage=done done=117 downloaded_new=3

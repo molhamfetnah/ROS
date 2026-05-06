@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scholar-scraper-suite"
+version = "0.1.0"
+description = "Parallel OA paper downloader with live status dashboard"
+requires-python = ">=3.10"
+dependencies = [
+  "streamlit>=1.33.0",
+  "streamlit-autorefresh>=1.0.1",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

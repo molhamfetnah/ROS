@@ -1,0 +1,54 @@
+title,year,authors,venue,citations,cluster
+Encoderless motion control systems using smart SKF sensor bearings,2000,,,1,own
+HIGH-PERFORMANCE DRIVES EMPLOYING SMART SENSOR BEARINGS,2000,,,0,own
+High-Performance Drives Employing Smart SKF Sensor Bearings,2000,,,3,own
+"AKM Joukhadar and al:"" Sensorless Drives, state-of-the-Art"", proc on CD of PCIM'2001-Nurenberg",2001,,,3,own
+IMPLEMENTATION OF SENSORLESS INDUCTION AND PERMANENT MAGNET SYNCHRONOUS MOTOR DRIVES USING NATURAL FIELD ORIENTATION,2001,,,2,own
+"SENSORLESS DRIVES, STATE-OF-THE-ART KEY-NOTE Paper IM",2001,,,16,own
+Recent Developments in Sensorless and Quasi-Sensorless Drive,2002,,,6,own
+SENSORLESS DRIVES – FROM THE STATE-OF-THE-ART TO FUTURE TRENDS,2002,,,0,own
+Sensorless Drivers,2002,,,0,own
+Sensorless induction motor and permanent magnet synchronous motor drives using natural field orientation,2002,,,7,own
+DSP-BASED SENSORLESS AND QUASI-SENSORLESS DRIVES FOR ROTATING AND LINEAR MOTORS,2003,,,0,own
+Quasi and Fully Sensorless Speed Control of Indirect RFOC Induction Motor Drives for Low Speed Operation,2004,,,0,own
+Fuzzy Logic-Like PI Controller-Based Duty Cycle Control of AC/DC Space Vector Modulation (SVM) Converter Driven DC Motor,2010,,,0,own
+Novel ANN Based-Sensorless Speed Estimation of DC Motor Control (Mechatronics Approach),2010,,,0,own
+Speed sensorless control of DFIG based MRAS observer,2010,,,12,own
+Mobile robot-based motion control and intelligent collision avoidance,2011,,,2,own
+Performance Enhancement Based-Adaptive Sliding Mode Assisted –Recursive Maximum Likelihood Estimator for Sensorless Control of Linear Motion Control System,2011,,,0,own
+Real time control of multi-agent mobile robots with intelligent collision avoidance system,2013,,,11,own
+نمذجة ومحاكاة منظومة تغذية كهربائية تكيفية مستحدثة بهدف تحسين اقتصادية الوقود في السيارات باستخدام SUMILINK & C-CODE/MATLAB‎,2013,,,0,own
+Intelligent collision avoidance for multi agent mobile robots,2014,,,10,own
+A novel control-navigation system-based adaptive optimal controller EKF localization of DDMR,2015,,,9,own
+Integral LQR-Based 6DoF Autonomous Quadrocopter Balancing System Control,2015,,,13,own
+Solving Maze Problem Using Newly Modified Tremaux’s Algorithm with the Bees Algorithm,2017,,,5,own
+Design and implementation of auto car driving system with collision avoidance,2018,,,6,own
+Trajectory tracking control of a quadcopter UAV using nonlinear control,2018,,,23,own
+UKF-based enhancement and ROS implementation of 4-WDDMR localization with advanced control system,2018,,,3,own
+Using the Bees Algorithm for wheeled mobile robot path planning in an indoor dynamic environment,2018,,,50,own
+A HIGH PERFORMANCE ROBUST HARD DISK DRIVE CONTROLLER USING PARAMETER-DEPENDENT LYAPUNOV FUNCTION APPROACH,2019,,,0,own
+Adaptive LQ-based computed-torque controller for robotic manipulator,2019,,,9,own
+LQR-BASED CONTROL OF A SINGLE MOTOR ELECTRONIC WEDGE BRAKE EWB FOR AUTOMOTIVE BRAKE–BY–WIRE SYSTEM,2019,,,12,own
+"Mechanism, Machine, Robotics and Mechatronics Sciences",2019,,,4,own
+UKF-Assisted SLAM for 4WDDMR Localization and Mapping,2019,,,6,own
+تعديل تابع الانتماء في طريقة المربعات الصغرى الضبابية FLS ودمجها مع نظام الاستدلال الضبابي SUGENO لمعالجة حالات عدم التأكد‎,2019,,,0,own
+A NEWLY DEVELOPED ADAPTIVE BACKSTEPPING-ASSISTED MRAS CONTROL,2020,,,0,own
+A portable Raspberry Pi-based system for diagnosis of heart valve diseases using automatic segmentation and artificial neural networks,2020,,,4,own
+Control Systems and Applications,2020,,,15,own
+Machine vision and navigation,2020,,,42,own
+UKF-Based Image Filtering and 3D Reconstruction,2020,,,10,own
+Unmanned robotic systems and applications,2020,,,2,own
+Adaptive Control of a Manipulator with Closed Kinematic Chains and Linear Actuator,2021,,,3,own
+Population of the Bees Algorithm for Robot Path Planning in a Static,2022,,,0,own
+Α new method to generate the initial population of the Bees Algorithm for robot path planning in a static environment,2022,,,3,own
+A New Approach for Solving Boundary and Initial Value Problems by Coupling the HE Method and Sawi Transform,2023,,,2,own
+Acknowledgment to the Reviewers of Designs in 2022,2023,,,0,own
+Acknowledgment to the Reviewers of Sensors in 2022,2023,,,0,own
+Intelligent Production and Manufacturing Optimisation: The Bees Algorithm Approach,2023,,,2,own
+Toward a Computationally Efficient Solution of the Inverse Kinematics Problem Using Machine Learning,2023,,,1,own
+Eine neue Methode zur Erzeugung der Anfangspopulation des Bienenalgorithmus für die Roboterpfadplanung in einer statischen Umgebung,2024,,,0,own
+"Frontiers of Artificial Intelligence, Ethics, and Multidisciplinary Applications",2024,,,3,own
+Roboterpfadplanung in einer statischen Umgebung,2024,,,0,own
+A Novel Swarm-UAV Formation Tracking Control Based on Networked-MPC and Dual Quaternion Algebra,2025,,,0,own
+Design and Experimental Evaluation of EKF-LQR Navigation on Raspberry Pi for Autonomous Mobile Robots,2026,,,0,own
+Improving Classification in Support Vector Machine Using Neutrosophic Logic.,2026,,,0,own

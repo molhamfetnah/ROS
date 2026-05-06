@@ -1,0 +1,1 @@
+own_papers=53\nrelated_papers=198\nrelated_downloaded=91\nrelated_failed=107\nown_csv=/mnt/data/ros/session/artifacts/cluster_own_papers.csv\nrelated_csv=/mnt/data/ros/session/artifacts/cluster_related_papers.csv\nsqlite_db=/mnt/data/ros/session/artifacts/paper_clusters.sqlite\n

@@ -1,0 +1,14 @@
+{
+  "probe": [
+    {
+      "source": "Scopus API",
+      "status": 401,
+      "snippet": "{\"service-error\":{\"status\":{\"statusCode\":\"AUTHENTICATION_ERROR\",\"statusText\":\"Invalid API Key\"}}}"
+    },
+    {
+      "source": "Web of Science API",
+      "status": 401,
+      "snippet": "{\n  \"message\":\"No API key found in request\"\n}"
+    }
+  ]
+}

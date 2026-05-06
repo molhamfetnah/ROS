@@ -1,0 +1,7 @@
+Cluster: own
+own_papers: 53
+own_download_rows: 10
+own_downloaded: 3
+own_failed: 7
+own_unavailable: 0
+own_pdf_files: 3

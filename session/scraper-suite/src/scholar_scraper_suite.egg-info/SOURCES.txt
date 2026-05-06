@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/scholar_scraper/__init__.py
+src/scholar_scraper/cli.py
+src/scholar_scraper/config.py
+src/scholar_scraper/downloader.py
+src/scholar_scraper/io_utils.py
+src/scholar_scraper/pipeline.py
+src/scholar_scraper/sources/__init__.py
+src/scholar_scraper/sources/openalex.py
+src/scholar_scraper/sources/unpaywall.py
+src/scholar_scraper_suite.egg-info/PKG-INFO
+src/scholar_scraper_suite.egg-info/SOURCES.txt
+src/scholar_scraper_suite.egg-info/dependency_links.txt
+src/scholar_scraper_suite.egg-info/requires.txt
+src/scholar_scraper_suite.egg-info/top_level.txt
+tests/test_downloader.py

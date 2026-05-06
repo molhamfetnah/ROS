@@ -1,0 +1,15 @@
+artifacts_clustered/
+  own/
+    datasets/raw
+    datasets/processed
+    downloads/pdf
+    database/own_cluster.sqlite
+    runtime
+    reports/manifest.txt
+  related/
+    datasets/raw
+    datasets/processed
+    downloads/pdf
+    database/related_cluster.sqlite
+    runtime
+    reports/manifest.txt
