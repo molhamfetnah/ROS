@@ -324,3 +324,18 @@ git submodule update --init --recursive
 - Core subrepos:
   - `program/research-program-index/README.md`
   - `program/benchmark-core/README.md`
+
+---
+
+## 10. Paper Submissions
+
+| # | Project | Journal | Manuscript ID | Status |
+|---|---------|---------|---------------|--------|
+| 1 | Swarm (Bees Algorithm) | Applied Soft Computing | ASOC-D-26-06746 | Received |
+| 2 | IK Ensemble | IEEE RA-L | 26-2479 | Received |
+| 3 | UAV Distributed MPC | Robotics and Autonomous Systems | ROBOT-D-26-01147 | Received |
+
+### Tracking
+- Applied Soft Computing: https://www.editorialmanager.com/ASOC
+- IEEE RA-L: https://ras.papercept.net/journals/ral
+- Robotics and Autonomous Systems: https://www.editorialmanager.com/ROBOT/
